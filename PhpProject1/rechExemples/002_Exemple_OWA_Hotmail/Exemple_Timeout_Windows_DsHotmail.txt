@@ -1,0 +1,10 @@
+
+<script>
+    window.setTimeout(function () {
+        var spinner = document.getElementById("loadingSpinner");
+        if (spinner) {
+            spinner.style.visibility = "visible";
+            spinner.style.opacity = "1";
+        }
+    }, 1000);
+</script>

@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, ul {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgb(236,236,236); /* bleu clair */
+	font-family: courier New;
+}
+
+.global {
+	/* l'ensemble de la page est centré */
+	width: 950px;
+	margin: 0 auto;
+	background-color: rgb(236,236,236);
+}
+
+.entete {
+	/* bandeau d'en-tete */
+	height: 80px;
+	padding: 0px;
+	background-color: rgb(236,236,236);
+	font-size: 15px;
+}
+
+.blocmenu {
+	width: 256px;
+	float: left;
+	position: fixed;
+	margin-top: 15px;
+}
+
+.contenu {
+	/* colonne de droite */
+	max-width: 693px;
+	float: right;
+	padding: 10px 0px 10px 10px;
+	background-color: rgb(236,236,236);
+}
+
+.pied {
+	/* pied de page */
+	clear: both;	/* oblige le browser à placer ce footer sous les 2 blocs flottants */
+	background-color: rgb(236,236,236);
+}
+
+img {
+	vertical-align: top;
+}
+
+.contenuImages {
+	width: 692px;
+}
+
+table {
+	width: 692px;
+}
+
+.imgsurvol:hover {
+	-webkit-transform: scale(1.5);
+	-moz-transform:scale(1.5);
+	transform: scale(1.5);
+}

@@ -1,0 +1,22 @@
+body {
+	display: flex;
+	flex-direction: row;
+}
+.colonne1 {
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    padding: 0px;
+    margin: 100px 20px 10px 5px;
+    justify-content: flex-start;
+}
+.colonne2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 600px;
+}
+
+img {
+	vertical-align: top;
+}
