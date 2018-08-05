@@ -63,3 +63,34 @@ table {
 	-moz-transform:scale(1.5);
 	transform: scale(1.5);
 }
+
+.colonnes_pied {
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    border: 3px solid red;
+}
+
+.cols_gauche {
+    display: flex;
+    flex-direction: row;
+    left: 3%;
+    position: absolute;
+    bottom: -65%;
+}
+
+.cols_droite {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    bottom: -65%;
+    height: 20px;
+    width: 60px;
+    right: 0 auto;
+}
+
+.image_adresse {
+    width: 20px;
+    height: 20px;
+    border: 3px solid black;
+}

@@ -6,8 +6,8 @@
    <meta charset='utf-8'>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="css/styleMenu.css">
-   <link rel="stylesheet" href="css/style001.css">
+   <link href="css/style001.css" rel="stylesheet" type="text/css"/>
+   <link href="css/styleMenu.css" rel="stylesheet" type="text/css"/>
    
    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
    <script src="js/script.js"></script>
@@ -74,10 +74,8 @@
             <hr>
     </section>
 
-    <footer class="pied">
-        <p>copyright@ mb</p>
-		
-    </footer>
+    <?php include ("pages/pied-de-page.php"); ?>
+    
 
             <script type="text/javascript">
                 window.onscroll=function(){menuSticky()};
