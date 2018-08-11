@@ -21,7 +21,7 @@
 <!--	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>	-->
    
 </head>
-<body>
+<body onscroll="function(){menuSticky()}">
 <div class="global">
     <header class="entete">
     	<img src="images/image001.jpg" alt="UPPLEVA" height="80"/>
@@ -104,8 +104,8 @@
 </div>
     
                 <script type="text/javascript">
-                window.onscroll=function(){menuSticky()};
-                var menu = document.getElementById("menu");
+                //window.onscroll=function(){menuSticky()};
+                var menu = document.getElementById("cssmenu");
                 var sticky = menu.offsetTop;
                 
                 function menuSticky(){

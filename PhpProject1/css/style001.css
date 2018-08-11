@@ -28,8 +28,18 @@ body {
 .blocmenu {
 	width: 256px;
 	float: left;
-	position: fixed;
+	/* position: fixed; */
+        display: block;
 	margin-top: 15px;
+        overflow: hidden;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.sticky + .contenu {
+    padding-top: 60px;
 }
 
 .contenu {
