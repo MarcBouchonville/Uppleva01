@@ -8,17 +8,17 @@
                 <div class="cols_droite">
                     <div class="col_droite_01">
                         <a href="https://www.instagram.com/uppleva.NordicInteriorDesign" title="connexion INSTAGRAM">
-                            <img class="image_adresse" src="images/lien004_instagram.jpg" alt="I" width="20px" height="20px" />
+                            <img class="image_adresse" src="../images/lien004_instagram.jpg" alt="I" width="20px" height="20px" />
                         </a>
                     </div>
                     <div class="col_droite_02">
                         <a href="https://www.linkedin.com/in/virginieandre/" title="connexion LinkedIn">
-                            <img class="image_adresse" src="images/lien005_linkedin.jpg" alt="L" width="20px" height="20px" />
+                            <img class="image_adresse" src="../images/lien005_linkedin.jpg" alt="L" width="20px" height="20px" />
                         </a>
                     </div>
                     <div class="col_droite_03">
                         <a href="https://www.facebook.com/virginieuppleva" title="connexion Facebook">
-                            <img class="image_adresse" src="images/lien001_facebook.jpg" alt="F" width="20px" height="20px" />
+                            <img class="image_adresse" src="../images/lien001_facebook.jpg" alt="F" width="20px" height="20px" />
                         </a>
                     </div>
                 </div>

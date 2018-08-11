@@ -23,23 +23,24 @@
 </head>
 <body>
 <div class="global">
-	<?php include ("pages/entete.php"); ?>
-
+    <header class="entete">
+    	<img src="images/image001.jpg" alt="UPPLEVA" height="80"/>
+    </header>
     <nav class="blocmenu">
-            <div id='cssmenu'>
+        <div id='cssmenu'>
             <ul>
-               <li class='active'><a href='#'><span>home</span></a></li>
-               <li class='has-sub'><a href='#'><span>à propos</span></a></li>
-               <li class='has-sub'><a href='#'><span>services</span></a>
-                  <ul>
-                     <li class='last'><a href='#'><span onclick="fenetrePopup()">shopping</span></a></li>
-                  </ul>
-               </li>
-               <li><a href='#'><span>réalisations</span></a></li>
-               <li class='has-sub'><a href='#'><span>projets</span></a></li>
-               <li class='has-sub'><a href='#'><span>contact</span></a></li>
+                <li class='active'><a href='index.php'><span>home</span></a></li>
+                <li class='has-sub'><a href='pages/page02.php'><span>à propos</span></a></li>
+                <li class='has-sub'><a href='#'><span>services</span></a>
+                    <ul>
+                        <li class='last'><a href='#'><span onclick="fenetrePopup()">shopping</span></a></li>
+                    </ul>
+                </li>
+                <li><a href='#'><span>réalisations</span></a></li>
+                <li class='has-sub'><a href='#'><span>projets</span></a></li>
+                <li class='has-sub'><a href='#'><span>contact</span></a></li>
             </ul>
-            </div>
+        </div>
     </nav>
     <section class="contenu">
 
@@ -74,10 +75,35 @@
             <hr>
     </section>
 
-    <?php include ("pages/pied-de-page.php"); ?>
+        <footer class="pied">
+            <div class="colonnes_pied">
+                <div class="cols_gauche">
+                    <div class="col_gauche_01">
+                        <a href="#">copyright @</a>
+                    </div>
+                </div>
+                <div class="cols_droite">
+                    <div class="col_droite_01">
+                        <a href="https://www.instagram.com/uppleva.NordicInteriorDesign" title="connexion INSTAGRAM">
+                            <img class="image_adresse" src="images/lien004_instagram.jpg" alt="I" width="20px" height="20px" />
+                        </a>
+                    </div>
+                    <div class="col_droite_02">
+                        <a href="https://www.linkedin.com/in/virginieandre/" title="connexion LinkedIn">
+                            <img class="image_adresse" src="images/lien005_linkedin.jpg" alt="L" width="20px" height="20px" />
+                        </a>
+                    </div>
+                    <div class="col_droite_03">
+                        <a href="https://www.facebook.com/virginieuppleva" title="connexion Facebook">
+                            <img class="image_adresse" src="images/lien001_facebook.jpg" alt="F" width="20px" height="20px" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</div>
     
-
-            <script type="text/javascript">
+                <script type="text/javascript">
                 window.onscroll=function(){menuSticky()};
                 var menu = document.getElementById("menu");
                 var sticky = menu.offsetTop;
@@ -95,7 +121,5 @@
 					myWindow.document.write("<p>this is the new window " + myWindow.name + "</p>");
 				}
             </script>
-    
-</div>
 </body>
 <html>

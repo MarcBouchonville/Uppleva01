@@ -59,38 +59,43 @@ table {
 }
 
 .imgsurvol:hover {
-	-webkit-transform: scale(1.5);
-	-moz-transform:scale(1.5);
-	transform: scale(1.5);
+    -webkit-transform: scale(1.3);
+    -moz-transform:scale(1.3);
+    transform: scale(1.3);
 }
 
 .colonnes_pied {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     bottom: 0;
-    border: 3px solid red;
 }
 
 .cols_gauche {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     left: 3%;
     position: absolute;
-    bottom: -65%;
+    bottom: -53%;
 }
 
 .cols_droite {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
     position: absolute;
-    bottom: -65%;
+    bottom: -53%;
     height: 20px;
-    width: 60px;
-    right: 0 auto;
+    width: 980px;
+    right: 0px;
 }
 
 .image_adresse {
     width: 20px;
     height: 20px;
-    border: 3px solid black;
+    border: 1px solid black;
 }
