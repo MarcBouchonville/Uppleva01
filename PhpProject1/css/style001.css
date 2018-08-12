@@ -10,6 +10,8 @@ body {
 	font-family: courier New;
 }
 
+
+/*  s'applique à l'entièreté du doc '*/
 .global {
 	/* l'ensemble de la page est centré */
 	width: 950px;
@@ -17,6 +19,7 @@ body {
 	background-color: rgb(236,236,236);
 }
 
+/*  NE s'applique QU'à l'ENTETE du doc  */
 .entete {
 	/* bandeau d'en-tete */
 	height: 80px;
@@ -25,40 +28,32 @@ body {
 	font-size: 15px;
 }
 
-.blocmenu {
-	width: 256px;
+
+/*  NE concerne QUE le MENU à gauche    */
+nav .blocmenu {
+	position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        width: 256px;
 	float: left;
 	/* position: fixed; */
-        display: block;
+        /* display: block;  */
 	margin-top: 15px;
         overflow: hidden;
 }
-.sticky {
-    position: fixed;
-    top: 0;
-}
 
-.sticky + .contenu {
-    padding-top: 60px;
-}
 
-.contenu {
+
+
+/*  section du contenu de chaque document   */
+.global section {
 	/* colonne de droite */
-	max-width: 693px;
+	max-width: 670px;
 	float: right;
 	padding: 10px 0px 10px 10px;
 	background-color: rgb(236,236,236);
 }
 
-.pied {
-	/* pied de page */
-	clear: both;	/* oblige le browser à placer ce footer sous les 2 blocs flottants */
-	background-color: rgb(236,236,236);
-}
-
-img {
-	vertical-align: top;
-}
 
 .contenuImages {
 	width: 692px;
@@ -73,6 +68,22 @@ table {
     -moz-transform:scale(1.3);
     transform: scale(1.3);
 }
+
+/*  PIED de chaque formulaire   */
+.pied {
+	/* pied de page */
+	clear: both;	/* oblige le browser à placer ce footer sous les 2 blocs flottants */
+	background-color: rgb(236,236,236);
+}
+
+footer .colonnes_pied .cols_gauche .col_gauche_01 a,
+footer .colonnes_pied .cols_droite .col_droite_01 a,
+footer .colonnes_pied .cols_droite .col_droite_02 a,
+footer .colonnes_pied .cols_droite .col_droite_03 a {
+	vertical-align: top;
+}
+
+
 
 .colonnes_pied {
     display: flex;

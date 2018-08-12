@@ -1,9 +1,9 @@
     <nav class="blocmenu">
             <div id='cssmenu'>
             <ul>
-                <li class='active'><a href='../index.php'><span>home</span></a></li>
+                <li class='has-sub'><a href='../index.php'><span>home</span></a></li>
                 <li class='has-sub'><a href='page02.php'><span>à propos</span></a></li>
-               <li class='has-sub'><a href='#'><span>services</span></a>
+               <li class='active'><a href='#'><span>services</span></a>
                   <ul>
                       <li class='last'><a href='#'><span onclick="fenetrePopup()">shopping</span></a></li>
                   </ul>
