@@ -27,9 +27,10 @@ and open the template in the editor.
     <body>
         
         <div class='global'>
-            <?php include ("entete.php"); ?>
-            
-            
+            <header>
+                <?php include ("entete.php"); ?>
+            </header>
+
             <nav class="blocmenu">
                         <div id='cssmenu'>
                         <ul>
@@ -67,7 +68,9 @@ and open the template in the editor.
                     <p>Uppleva, vivez l'expérience scandinave !</p><br>
                 </div>
             </section>
-        <?php include ("pied-de-page.php"); ?>
+            <footer class="pied">
+                <?php include ("pied-de-page.php"); ?>
+            </footer>
         </div>
         
             <script type="text/javascript">

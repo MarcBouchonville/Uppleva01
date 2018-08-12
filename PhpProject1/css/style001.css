@@ -55,12 +55,13 @@ nav .blocmenu {
 }
 
 
-.contenuImages {
-	width: 692px;
+.contenu .contenuImages {
+	max-width: 670px;
 }
 
-table {
-	width: 692px;
+.global .contenu .contenuImages table
+{
+	max-width: 670px;
 }
 
 .imgsurvol:hover {
@@ -79,7 +80,8 @@ table {
 footer .colonnes_pied .cols_gauche .col_gauche_01 a,
 footer .colonnes_pied .cols_droite .col_droite_01 a,
 footer .colonnes_pied .cols_droite .col_droite_02 a,
-footer .colonnes_pied .cols_droite .col_droite_03 a {
+footer .colonnes_pied .cols_droite .col_droite_03 a
+{
 	vertical-align: top;
 }
 
