@@ -30,18 +30,10 @@ body {
 
 
 /*  NE concerne QUE le MENU à gauche    */
-nav .blocmenu {
-	position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        width: 256px;
-	float: left;
-	/* position: fixed; */
-        /* display: block;  */
-	margin-top: 15px;
-        overflow: hidden;
-}
+/* ce qui suit : transposé ds styleMenu.css : */
 
+
+/*  ici le menu    nav .blocmenu    retiré pour test    */
 
 
 
