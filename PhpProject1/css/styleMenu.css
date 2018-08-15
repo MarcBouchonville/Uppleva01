@@ -28,27 +28,13 @@
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  position: absolute;
   /* ajoute ce qui suit (provenant du style001.css pour nav .blocmenu) : */
-	/*position: -webkit-sticky;
-        position: sticky;
-        top: 0;                     */
-        /*width: 220px;
-	float: left;                */
-	/* position: fixed; */
-        /* display: block;  */
-	/*margin-top: 15px;         */
-        overflow: hidden;
+	/*position: -webkit-sticky; position: sticky;   top: 0; width: 220px;
+            float: left;    position: fixed;    display: block; margin-top: 15px;   */
+  overflow: hidden;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 220px;
-}
-
-.sticky + .contenu {
-    padding-top: 60px;
-}
 
 #cssmenu > ul > li {
   margin: 0 0 2px 0;

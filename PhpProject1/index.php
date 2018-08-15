@@ -28,17 +28,17 @@
     <header class="entete">
     	<img src="images/image001.jpg" alt="UPPLEVA" height="80"/>
     </header>
-    <nav class="blocmenu">
+    <nav class="blocmenu" id="menuPrincipal">
         <div id="cssmenu">
             <ul>
                 <li class='active'><a href='javascript:void(0)'><span>home</span></a></li>
                 <li class='has-sub'><a href='pages/page02.php'><span>à propos</span></a></li>
-                <li class='has-sub'><a href='#'><span>services</span></a>
+                <li class='has-sub'><a href='pages/page03.php'><span>services</span></a>
                     <ul>
                         <li class='last'><a href='#'><span onclick="fenetrePopup()">shopping</span></a></li>
                     </ul>
                 </li>
-                <li><a href='#'><span>réalisations</span></a></li>
+                <li class='has-sub'><a href='#'><span>réalisations</span></a></li>
                 <li class='has-sub'><a href='#'><span>projets</span></a></li>
                 <li class='has-sub'><a href='#'><span>contact</span></a></li>
             </ul>
@@ -106,13 +106,13 @@
 </div>
     
                 <script type="text/javascript">
-                window.onscroll=function(){menuSticky()};
-                var menu = document.getElementById("cssmenu");
+                window.onscroll = function() {menuSticky();};
+                var menu = document.getElementById("menuPrincipal");
                 var sticky = menu.offsetTop;
                 
                 function menuSticky(){
                     if (window.pageYOffset >= sticky) {
-                        menu.classList.add("sticky")
+                        menu.classList.add("sticky");
                     } else {
                         menu.classList.remove("sticky");
                     }

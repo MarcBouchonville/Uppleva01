@@ -31,7 +31,7 @@ and open the template in the editor.
                 <?php include ("entete.php"); ?>
             </header>
 
-            <nav class="blocmenu">
+            <nav class="blocmenu" id="menuPrincipal">
                         <div id='cssmenu'>
                         <ul>
                             <li class='has-sub'><a href='../index.php'><span>home</span></a></li>
@@ -74,13 +74,13 @@ and open the template in the editor.
         </div>
         
             <script type="text/javascript">
-                window.onscroll=function(){menuSticky()};
-                var menu = document.getElementById("menu");
+                window.onscroll=function(){menuSticky();};
+                var menu = document.getElementById("menuPrincipal");
                 var sticky = menu.offsetTop;
                 
                 function menuSticky(){
                     if (window.pageYOffset >= sticky) {
-                        menu.classList.add("sticky")
+                        menu.classList.add("sticky");
                     } else {
                         menu.classList.remove("sticky");
                     }

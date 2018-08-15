@@ -51,9 +51,18 @@ body {
 	max-width: 670px;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 220px;
+}
+.sticky + .contenu {
+    padding-top: 60px;
+}
+
 .global .contenu .contenuImages table
 {
-	max-width: 670px;
+    max-width: 670px;
 }
 
 .imgsurvol:hover {
@@ -112,5 +121,12 @@ footer .colonnes_pied .cols_droite .col_droite_03 a
 .image_adresse {
     width: 20px;
     height: 20px;
-    border: 1px solid black;
+    /*border: 1px solid black;  */
+}
+
+/* class dans la page03.php :    */
+
+.fenetreExplication a span {
+    text-decoration: none;
+    color: #000;
 }
