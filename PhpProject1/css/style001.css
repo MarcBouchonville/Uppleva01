@@ -94,6 +94,9 @@ footer .colonnes_pied .cols_droite .col_droite_03 a
     flex-direction: row;
     -webkit-flex-direction: row;
     bottom: 0;
+    /*  ajouté ce 18-08-2018    */
+    position: relative;
+    width: 112%;
 }
 
 .cols_gauche {
@@ -130,3 +133,5 @@ footer .colonnes_pied .cols_droite .col_droite_03 a
     text-decoration: none;
     color: #000;
 }
+
+/*  pour les fenetres popup */

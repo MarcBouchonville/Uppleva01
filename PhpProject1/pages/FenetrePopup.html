@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html>
+
+    <head>
+        <style>
+        #monImage001 {
+                background-image: url("../images/image003.jpg");
+                height: 600px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 0.4;
+        }
+        .titreImage {
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: black;
+                opacity: 1;
+        }
+        .texteSurPopup {
+                font-size: 5vw;
+                font-weight: bold;
+        }
+	</style>
+        <title>Popup - shopping</title>
+    </head>
 <body>
 
 <!-- demandé par Virginie : ouverture de fenêtre popup -->
 <!-- exemple de code ci-dessous -->
 
-<p>Click the button to open an about:blank page in a new browser window that is 200px wide and 100px tall.</p>
+
+<div id="monImage001">
+	<div class="titreImage">
+		<p class="texteSurPopup">Click the button to open an about:blank page in a new browser window that is 200px wide and 100px tall.</p>
+		<button onclick="myFunction()">Try it</button>
+		<p>autre test</p>
+	</div>
+</div>
+
+<!--    <p>Click the button to open an about:blank page in a new browser window that is 200px wide and 100px tall.</p>
 
 <button onclick="myFunction()">Shopping</button>
+-->
 
 <script>
 function myFunction() {
-    var myWindow = window.open("", "NomDeFenetre", "width=200,height=100");
+    var myWindow = window.open("", "NomDeFenetre", "width=600,height=300");
 	myWindow.document.write("<p>this is the new window " + myWindow.name + "</p>");
 }
 </script>

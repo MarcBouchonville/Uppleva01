@@ -119,7 +119,7 @@
                 }
 				
 				function fenetrePopup() {
-					var myWindow = window.open("", "NomDeFenetre", "width=400,height=200");
+					var myWindow = window.open("", "shopping", "width=600,height=300");
 					myWindow.document.write("<p>this is the new window " + myWindow.name + "</p>");
 				}
             </script>

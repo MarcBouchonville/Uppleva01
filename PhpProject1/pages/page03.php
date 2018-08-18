@@ -118,8 +118,19 @@ and open the template in the editor.
                 };
 				
 				function fenetrePopup01() {
-                                        var myWindow = window.open("", "Uppleva - et votre entreprise", "width=600,height=300");
-                                        var txtA = "<ul><li>";
+                                        var myWindow = window.open("", "Uppleva - et votre entreprise", "width=700,height=600");
+                                        var txtA = '<div id="monImage001" style="background-image: url(../images/image003.jpg); '
+                                        var txtA = txtA + 'height: 598px; ';
+                                        var txtA = txtA + 'background-position: center; ';
+                                        var txtA = txtA + 'background-repeat: no-repeat; ';
+                                        var txtA = txtA + 'background-size: cover; ';
+                                        var txtA = txtA + 'opacity: 0.5;';
+                                        var txtA = txtA + '">';
+                                        var txtA = txtA + '<div class="titreImage" style="opacity: 1;"';
+                                        var txtA = txtA + '>';
+                                        var txtA = txtA + '<ul class="texteSurPopup" style="font-size: 4vw; font-weight: bold; ';
+                                        var txtA = txtA + 'color: black; opacity: 1;"';
+                                        var txtA = txtA + '><li>';
                                         var txtA = txtA + "Réalisation des metrés" + "</li><li>";
                                         var txtA = txtA + "Plan 2D et 3D" + "</li><li>";
                                         var txtA = txtA + "Recherches et études des matériaux, mobiliers, décorations" + "</li><li>";
@@ -127,7 +138,7 @@ and open the template in the editor.
                                         var txtA = txtA + "Etude de devis des corps de métier" + "</li><li>";
                                         var txtA = txtA + "Partenariat avec des graphistes pour la réalisation de votre logo" + "</li><li>";
                                         var txtA = txtA + "Suivi de chantier" + "</li>";
-                                        var txtA = txtA + "</ul>";
+                                        var txtA = txtA + "</ul></div></div>";
 					myWindow.document.write("<p>" + myWindow.name + "</p>" + txtA);
 				};
                                 
