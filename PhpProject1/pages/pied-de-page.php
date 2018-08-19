@@ -2,7 +2,7 @@
             <div class="colonnes_pied">
                 <div class="cols_gauche">
                     <div class="col_gauche_01">
-                        <a href="#">copyright @</a>
+                        <a href="pageLoi.php">copyright @</a>
                     </div>
                 </div>
                 <div class="cols_droite">
