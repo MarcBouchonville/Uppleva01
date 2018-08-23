@@ -10,7 +10,7 @@
                </li>
                <li><a href='#'><span>réalisations</span></a></li>
                <li class='has-sub'><a href='#'><span>projets</span></a></li>
-               <li class='has-sub'><a href='#'><span>contact</span></a></li>
+               <li class='has-sub'><a href='page05.php'><span>contact</span></a></li>
             </ul>
             </div>
     </nav>
