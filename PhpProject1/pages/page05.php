@@ -51,27 +51,27 @@ and open the template in the editor.
 
             <section class='contenu'>
                 <div class="form-style-10">
-                    <form action="contactController.php" method="POST">
+                    <form action="../phpCode/contactController.php" method="POST">
                         <div class="section"><span>1</span>Identité</div>
                             <div class="inner-wrap">
                                 <label>Nom</label>
-                                <input type="text" name="Nom" required placeholder="NOM" />
+                                <input type="text" name="Nom" required maxlength="50" placeholder="NOM" />
                                 <label>Prénom</label>
-                                <input type="text" name="Prenom" placeholder="Prénom" />
+                                <input type="text" name="Prenom" maxlength="50" placeholder="Prénom" />
                             </div>
                         <div class="section"><span>2</span>Contact</div>
                             <div class="inner-wrap">
                                 <label>Email</label>
-                                <input type="email" name="Email" required placeholder="email@mail.com" />
+                                <input type="email" name="Email" required maxlength="70" placeholder="email@mail.com" />
                                 <label>Téléphone</label>
-                                <input type="tel" name="Telephone" placeholder="0400/120120" />
+                                <input type="tel" name="Telephone" maxlength="20" placeholder="04012010" />
                             </div>
                         <div class="section"><span>3</span>Objet</div>
                             <div class="inner-wrap">
                                 <label>Sujet</label>
-                                <input type="text" name="Sujet" />
+                                <input type="text" name="Sujet" maxlength="50" />
                                 <label>Message</label>
-                                <textarea name="Comment" maxlength="1000" placeholder="maximum 1000 lettres"></textarea>
+                                <textarea name="Comment" maxlength="2000" placeholder="maximum 2000 lettres"></textarea>
                             </div>
                         <div class="button-section">
                             <input type="submit" name="envoyer" />
