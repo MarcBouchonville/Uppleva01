@@ -36,14 +36,14 @@ and open the template in the editor.
                         <ul>
                             <li class='has-sub'><a href='../index.php'><span>home</span></a></li>
                             <li class='has-sub'><a href='page02.php'><span>à propos</span></a></li>
-                           <li class='active'><a href="#"><span>services</span></a>
+                            <li class='active'><a href="page03.php"><span>services</span></a>
                               <ul>
                                   <li class='last'><a href='#'><span onclick="fenetrePopup()">shopping</span></a></li>
                               </ul>
                            </li>
                            <li><a href='#'><span>réalisations</span></a></li>
                            <li class='has-sub'><a href='#'><span>projets</span></a></li>
-                           <li class='has-sub'><a href='#'><span>contact</span></a></li>
+                           <li class='has-sub'><a href='page05.php'><span>contact</span></a></li>
                         </ul>
                         </div>
             </nav>
