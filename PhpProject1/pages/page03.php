@@ -124,7 +124,7 @@ and open the template in the editor.
                                         var txtA = txtA + 'background-position: center; ';
                                         var txtA = txtA + 'background-repeat: no-repeat; ';
                                         var txtA = txtA + 'background-size: cover; ';
-                                        var txtA = txtA + 'opacity: 0.5;';
+                                        var txtA = txtA + 'opacity: 0.6;';
                                         var txtA = txtA + '">';
                                         var txtA = txtA + '<div class="titreImage" style="opacity: 1;"';
                                         var txtA = txtA + '>';
@@ -151,6 +151,7 @@ and open the template in the editor.
                                         var txtB = txtB + "</ul>";
 					myWindow.document.write("<p>" + myWindow.name + "</p>" + txtB);
                                 };
+                                
                                 
                                 function fenetrePopup03() {
                                     var myWindow = window.open("", "Uppleva - Projet de construction ou de rénovation", "width=600,height=300");
