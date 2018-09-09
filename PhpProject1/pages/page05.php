@@ -88,7 +88,6 @@ and open the template in the editor.
                 </div>
             </section>
             
-            
             <footer class="pied">
                 <?php include ("pied-de-page.php"); ?>
             </footer>
