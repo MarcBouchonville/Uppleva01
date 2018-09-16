@@ -27,6 +27,7 @@
 <div class="global">
     <header class="entete">
     	<img src="images/image001.jpg" alt="UPPLEVA" height="80"/>
+
     </header>
     <nav class="blocmenu" id="menuPrincipal">
         <div id="cssmenu">
@@ -104,6 +105,23 @@
         </div>
     </footer>
 </div>
+    <br>
+    <br>
+<div style="text-align: right; font-size: 50%;">
+    <form action="AdminSuivi.php" method="POST">
+        <div>
+            <input type="text" name="nom" placeholder="identifiant" style="font-size: 100%;">
+        </div>
+        <div>
+            <input type="password" placeholder="password" style="font-size: 100%;">
+        </div>
+        <div>
+            <input type="submit" value="ok" style="font-size: 100%;">
+        </div>
+    </form>
+</div>
+<br>
+<hr>
     
                 <script type="text/javascript">
                 window.onscroll = function() {menuSticky();};

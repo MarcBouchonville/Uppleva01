@@ -1,9 +1,13 @@
+<?php
+
+    session_start();
+
+    // recuperation de data
+    /* $nom = $_POST['nom'];
+    $prenom = $_POST['prenom']; */
+?>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
    <meta charset="UTF-8">
@@ -11,7 +15,7 @@ and open the template in the editor.
    <meta name="viewport" content="width=device-width, initial-scale=1">
    
    <meta HTTP-EQUIV="Pragma" content="no-cache">
-   <meta http-equiv="Refresh" content="3; URL=../index.php">
+   <meta http-equiv="Refresh" content="4; URL=../index.php">
    
    
    <link href="../css/style004.css" rel="stylesheet" type="text/css"/>
@@ -22,10 +26,10 @@ and open the template in the editor.
 
    <meta name="author" content="Marc Bouchonville" />
    <meta name="date" content="2018-06-03" scheme="YYYY-MM-DD" />
-<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">	-->
+
    <meta name="expires" content="1 January 2020 ">
    <link href=”favicon.ico” rel=”icon” />
-<!--	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>	-->
+
     <title>à propos</title>
     </head>
     <body>
@@ -45,7 +49,9 @@ and open the template in the editor.
                         <div class="text"></div>
                             <div>
                                     <center>
-                                            <p>$nom $prenom</p>
+                                            <p>
+                                                <?php echo $_SESSION['tonNom'] . ' ' . $_SESSION['tonPrenom']; ?>
+                                            </p>
                                             <p>Votre message a été enregistré</p>
                                             <br>
                                             <p>merci</p>
@@ -59,7 +65,9 @@ and open the template in the editor.
                                     <div class="text"></div>
                             <div>
                                     <center>
-                                            <p>$nom $prenom</p>
+                                            <p>
+                                                <?php echo $_SESSION['tonNom'] . ' ' . $_SESSION['tonPrenom']; ?>
+                                            </p>
                                             <p>Votre message a été enregistré</p>
                                             <br>
                                             <p>merci</p>
@@ -73,7 +81,9 @@ and open the template in the editor.
                         <div class="text"></div>
                             <div>
                                     <center>
-                                            <p>$nom $prenom</p>
+                                            <p>
+                                                <?php echo $_SESSION['tonNom'] . ' ' . $_SESSION['tonPrenom']; ?>
+                                            </p>
                                             <p>Votre message a été enregistré</p>
                                             <br>
                                             <p>merci</p>
@@ -83,7 +93,7 @@ and open the template in the editor.
 
                     <br>
                     <br>
-                    <div style="text-align:center">
+                    <div style="text-align: center;">
                       <span class="dot"></span> 
                       <span class="dot"></span> 
                       <span class="dot"></span> 

@@ -1,4 +1,5 @@
 <?php
+
     /*  formulaire page05.php rempli ?  */
 
     $valid = isset($_POST['Nom']) && isset($_POST['Email']);
@@ -46,8 +47,12 @@
         $stmt->execute();
         
         //  VERIFICATION :
+        session_start();
+        $_SESSION['tonNom'] = $_POST['nom'];
+        $_SESSION['tonPrenom'] = $_POST['prenom'];
         echo "Vos coordonnées sont enregistrées <br> merci";
-        header('Location: ../index.php');
+        
+        header('Location: ../pages/page10.php');
     }
     catch(PDOException $e) {
         echo "Erreur: " . $e;
