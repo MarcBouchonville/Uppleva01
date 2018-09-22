@@ -1,0 +1,192 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22-sept.-2018, 14:59:46
+    Author     : Utilisateur
+*/
+/*  pour la page20 (et suivantes) des             MENUS           */
+@charset "utf-8";
+body, div, ul {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: rgb(236,236,236); /* bleu clair */
+	font-family: courier New;
+}
+.global {
+	/* l'ensemble de la page est centré */
+	width: 950px;
+	margin: 0 auto;
+	background-color: rgb(236,236,236);
+}
+.entete {
+	/* bandeau d'en-tete */
+	height: 80px;
+	padding: 0px;
+	background-color: rgb(236,236,236);
+	font-size: 15px;
+}
+
+/*  autres tests */
+.global section {
+	/* colonne de droite */
+	max-width: 670px;
+	float: right;
+	padding: 10px 0px 10px 10px;
+	background-color: rgb(236,236,236);
+}
+
+
+.contenu .contenuImages {
+	max-width: 670px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 220px;
+}
+.sticky + .contenu {
+    padding-top: 60px;
+}
+
+.global .contenu .contenuImages table
+{
+    max-width: 670px;
+}
+
+.imgsurvol:hover {
+    -webkit-transform: scale(1.3);
+    -moz-transform:scale(1.3);
+    transform: scale(1.3);
+}
+
+/*  PIED de chaque formulaire   */
+.pied {
+	/* pied de page */
+	clear: both;	/* oblige le browser à placer ce footer sous les 2 blocs flottants */
+	background-color: rgb(236,236,236);
+}
+
+footer .colonnes_pied .cols_gauche .col_gauche_01 a,
+footer .colonnes_pied .cols_droite .col_droite_01 a,
+footer .colonnes_pied .cols_droite .col_droite_02 a,
+footer .colonnes_pied .cols_droite .col_droite_03 a
+{
+	vertical-align: top;
+}
+
+
+
+.colonnes_pied {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    bottom: 0;
+    /*  ajouté ce 18-08-2018    */
+    position: relative;
+    width: 112%;
+}
+
+.cols_gauche {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    left: 3%;
+    position: absolute;
+    bottom: -53%;
+}
+
+.cols_droite {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    position: absolute;
+    bottom: -53%;
+    height: 20px;
+    width: 980px;
+    right: 0px;
+}
+
+.image_adresse {
+    width: 20px;
+    height: 20px;
+    /*border: 1px solid black;  */
+}
+
+/* class dans la page03.php :    */
+
+.fenetreExplication a span {
+    text-decoration: none;
+    color: #000;
+}
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+#consultation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#consultation ul li {
+    float: left;
+}
+
+li a, .consult003 {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .consult002:hover .consult003 {
+    background-color: red;
+}
+
+li.consult002 {
+    display: inline-block;
+}
+
+.consult-contenu {
+    display: none;
+    position: absolute;
+    background-color: #ECECEC;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.consult-contenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.consult-contenu a:hover {
+	background-color: #333;
+	color: white;
+}
+
+.consult002:hover .consult-contenu {
+    display: block;
+	background-color: #ECECEC;
+	color: white;
+}
+
+
+
+/*  TESTS   */
+/*  ----------------------------------------------------    */
+

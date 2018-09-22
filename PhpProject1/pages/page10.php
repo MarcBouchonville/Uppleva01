@@ -1,8 +1,7 @@
 <?php
 
-    session_start();
 
-    // recuperation de data
+    // pas de      recuperation de data
     /* $nom = $_POST['nom'];
     $prenom = $_POST['prenom']; */
 ?>
@@ -50,7 +49,7 @@
                             <div>
                                     <center>
                                             <p>
-                                                <?php echo $_SESSION['tonNom'] . ' ' . $_SESSION['tonPrenom']; ?>
+                                             <!--   <?php echo $_SESSION['tonNom'] . ' ' . $_SESSION['tonPrenom']; ?>   -->
                                             </p>
                                             <p>Votre message a été enregistré</p>
                                             <br>
@@ -66,7 +65,7 @@
                             <div>
                                     <center>
                                             <p>
-                                                <?php echo $_SESSION['tonNom'] . ' ' . $_SESSION['tonPrenom']; ?>
+                                            <!--   <?php echo $_SESSION['tonNom'] . ' ' . $_SESSION['tonPrenom']; ?>   -->
                                             </p>
                                             <p>Votre message a été enregistré</p>
                                             <br>
@@ -82,7 +81,7 @@
                             <div>
                                     <center>
                                             <p>
-                                                <?php echo $_SESSION['tonNom'] . ' ' . $_SESSION['tonPrenom']; ?>
+                                            <!--   <?php echo $_SESSION['tonNom'] . ' ' . $_SESSION['tonPrenom']; ?>   -->
                                             </p>
                                             <p>Votre message a été enregistré</p>
                                             <br>

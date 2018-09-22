@@ -82,7 +82,7 @@
         <div class="colonnes_pied">
             <div class="cols_gauche">
                 <div class="col_gauche_01">
-                    <a href="pages/pageLoi.php">copyright @</a>
+                    <a href="pages/pageLoi.php" title="mentions légales">copyright @</a>
                 </div>
             </div>
             <div class="cols_droite">
@@ -108,16 +108,12 @@
     <br>
     <br>
 <div style="text-align: right; font-size: 50%;">
-    <form action="AdminSuivi.php" method="POST">
-        <div>
+    <form method="POST" action="phpCode/connectUser.php">
+
             <input type="text" name="nom" placeholder="identifiant" style="font-size: 100%;">
-        </div>
-        <div>
-            <input type="password" placeholder="password" style="font-size: 100%;">
-        </div>
-        <div>
+            <input type="password" name="motdepasse" placeholder="password" style="font-size: 100%;">
+            <input type="reset" value="effacer" style="font-size: 100%;">
             <input type="submit" value="ok" style="font-size: 100%;">
-        </div>
     </form>
 </div>
 <br>
