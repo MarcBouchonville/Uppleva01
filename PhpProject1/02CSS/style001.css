@@ -1,0 +1,330 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25-nov.-2018, 12:14:25
+    Author     : Utilisateur
+*/
+
+@charset "utf-8";
+/* CSS Document */
+.mobile {
+	display: none;
+}
+body {
+	font-family: "Courier New", Courier, monospace;
+	background-color: #ECECEC;
+	margin: 0;
+	padding: 0;
+}
+
+.global {
+	/*width: 100%;*/
+	
+	max-width: 950px;/* une valeur « max-width » peut s'avérer utile pour éviter que cette mise en page ne soit trop large 
+						sur un moniteur de grande taille. La lisibilité de la longueur de ligne est ainsi améliorée. IE6 ne tient 
+						pas compte de cette déclaration. */
+	/*min-width: 100px;*/
+					/* une valeur « min-width » peut s'avérer utile pour éviter que cette mise en page ne soit trop étroite. 
+					La longueur de ligne est ainsi plus lisible dans les colonnes latérales. IE6 ne tient pas compte de cette déclaration. */
+	background-color: #ECECEC;
+	margin: 0 auto;
+}
+
+/* ~~ aucune largeur n'est attribuée à l'en-tête. Il occupera toute la largeur de votre mise en page. 
+Il contient un espace réservé pour une image, qui doit être remplacé par votre logo lié. ~~ */
+.entete {
+	background-color: #ECECEC;
+	max-height: 5%;
+}
+
+.entete img {
+	background-color: #ECECEC;
+	display:block;
+	max-width: 50%;
+	max-height: 5%;
+}
+
+.blocmenu {
+	float: left;
+	width: 30%;
+	background-color: #ECECEC;
+	padding-bottom: 5%;
+	padding-top: 2%;
+}
+.contenu {
+	font-size: 2vw;
+	padding: 2% 1% 2% 1%;
+	max-width: 60%;
+	max-height: 70%;
+	float: right;
+	overflow-y: scroll;
+}
+/*	contenu img ==> pour le fichier index.html*/
+.contentimage ul {
+	list-style-type: none;
+}
+
+.contentimage ul li img {
+	max-width: 100%;
+	max-height: 360px;
+}
+
+/*	contenu_page pour les fichiers page02 etc 	*/
+.contenu_page {
+	/*	contenu à droite	*/
+	max-height: 33vw;
+}
+
+article p img {
+	width: auto;
+	max-width: 104%;
+	max-height: 100%;
+}
+
+#menu li a {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 2vw;
+}
+
+
+/* ~~ Sélecteurs d'éléments/balises ~~ */
+ul { /* En raison des variations entre les navigateurs, il est conseillé d'attribuer une valeur de zéro aux marges intérieures 
+		et aux marges des listes. A des fins de cohérence, vous pouvez définir les valeurs désirées dans cette zone ou dans les éléments de 
+		liste (LI, DT, DD) qu'elle contient. N'oubliez pas que les paramètres que vous définissez ici se répercuteront sur la liste .nav, 
+		sauf si vous rédigez un sélecteur plus spécifique. */
+	padding: 1%;
+	margin: 0;
+}
+p {
+	margin-top: 0;	 /* la suppression de la marge supérieure résout un problème où les marges sortent de leur div conteneur. 
+						La marge inférieure restante l'éloignera de tout élément qui suit. */
+	padding-right: 5%;
+	padding-left: 5%; /* l'ajout de la marge intérieure aux côtés des éléments à l'intérieur des divs, et non aux divs proprement 
+						dit, évite le recours à des calculs de modèle de boîte. Une autre méthode consiste à employer une div imbriquée 
+						avec marge intérieure latérale. */
+}
+
+a img {  /* ce sélecteur élimine la bordure bleue par défaut affichée dans certains navigateurs autour d'une image lorsque celle-ci est 
+			entourée d'un lien. */
+	border: none;
+}
+
+/* ~~ La définition du style des liens de votre site doit respecter cet ordre, y compris le groupe de sélecteurs qui créent 
+		l'effet de survol. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* à moins que vous ne définissiez un style particulièrement exclusif pour vos liens, mieux vaut 
+									prévoir un soulignement, qui garantit une identification visuelle rapide. */
+}
+a:hover, a:active, a:focus { /* ce groupe de sélecteurs offrira à un navigateur au clavier la même expérience de survol que celle 
+								d'une personne employant la souris. */
+	text-decoration: none;
+}
+
+/* ~~ ce conteneur entoure toutes les autres divs, en leur attribuant leur largeur sur base d'un pourcentage ~~ */
+
+/* ~~ Colonnes pour la mise en page. ~~ 
+
+1) La marge intérieure n'est placée qu'en haut et/ou en bas des divs. Les éléments à l'intérieur de ces divs posséderont une marge 
+	intérieure sur les côtés. Vous évitez ainsi de devoir recourir à des « calculs de modèle de boîte ». N'oubliez pas que si vous 
+	ajoutez une marge intérieure latérale ou une bordure à la div proprement dite, elle sera ajoutée à la largeur que vous définissez 
+	pour créer la largeur totale. Vous pouvez également supprimer la marge intérieure de l'élément dans la div et placer une seconde 
+	div à l'intérieur, sans largeur et possédant une marge intérieure appropriée pour votre concept.
+
+2) Toutes les colonnes étant flottantes, aucune marge ne leur a été attribuée. Si vous devez ajouter une marge, évitez de la placer du 
+	côté vers lequel vous effectuez le flottement (par exemple, une marge droite sur une div configurée pour flotter vers la droite). 
+	Dans de nombreux cas, vous pouvez plutôt employer une marge intérieure. Pour les divs où cette règle ne peut pas être respectée, 
+	ajoutez une déclaration « display:inline » à la règle de la div, afin de contourner un bogue qui amène certaines versions d'Internet 
+	Explorer à doubler la marge.
+
+3) Comme des classes peuvent être employées à plusieurs reprises dans un document (et que plusieurs classes peuvent aussi être 
+	attribuées à un élément), les colonnes ont reçu des noms de classes au lieu d'ID. Par exemple, deux divs de barre latérale peuvent 
+	être empilées si nécessaire. Elles peuvent être très facilement remplacées par des ID si vous le souhaitez, pour autant que vous 
+	ne les utilisiez qu'une fois par document.
+
+4) Si vous préférez que la navigation se trouve à droite et pas à gauche, faites flotter ces colonnes en sens opposé (toutes vers 
+	la droite au lieu de vers la gauche). Leur rendu s'effectuera dans l'ordre inverse. Il n'est pas nécessaire de déplacer les divs 
+	dans le code HTML source.
+
+*/
+
+
+/* ~~ Styles de liste de navigation (peuvent être supprimés si vous optez pour un menu de survol prédéfini tel que Spry) ~~ */
+#menu {
+	list-style: none; /* entraîne la suppression du marqueur de liste */
+		/* border-top: 1px solid #666;*/  /* crée la bordure supérieure des liens ; les autres sont placées à l'aide d'une bordure 
+		inférieure sur la balise LI */
+	margin-bottom: 0%; /* crée l'espace entre la navigation et le contenu en dessous */
+	font-family: "Courier New", Courier, monospace;
+	font-size: 50%;
+}
+
+#menu li a, #menu li a:visited { /* le regroupement de ces sélecteurs garantit que vos liens conservent leur apparence de bouton, 
+							même après avoir été activés */
+	padding: 5% 5% 5% 10%;
+	display: block; /* attribue au bloc de liens des propriétés qui lui font remplir toute la balise LI qui le contient. 
+						Force la zone entière à réagir à un clic de souris. */
+	text-decoration: none;
+	background-color: white;
+	color: black;
+}
+#menu li a:hover, #menu li a:active, #menu li a:focus { /* modifie la couleur de l'arrière-plan et du texte pour les navigateurs à 
+													la souris et au clavier. */
+	background-color: #6F7D94;
+	color: #FFF;
+}
+
+/* ~~ Pied de page ~~ */
+.pied {
+	padding: 10%;
+	background-color: #ECECEC;
+	position: relative;/* donne hasLayout à IE6 de façon à permettre un effacement correct */
+	clear: both; /* cette propriété d'effacement force le .container à comprendre où se terminent les colonnes et à les contenir */
+}
+
+
+.colonnes_pied {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    bottom: 0;
+    /*  ajouté ce 18-08-2018    */
+    position: relative;
+    width: 100%;
+	font-size: 2vw;
+}
+
+.cols_gauche {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    left: 3%;
+    position: absolute;
+    bottom: -53%;
+}
+
+.cols_droite {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    position: absolute;
+    bottom: -53%;
+    height: 20px;
+    right: 0px;
+}
+
+
+
+/*	-----------------------		*/
+
+/*	pour la page07	*/
+
+.form-style-10{
+    width:90%;
+	max-height: 33vw;
+/*	overflow-y: scroll;*/
+    padding:3%;
+    margin:0px auto;
+    background: #ECECEC;
+    border-radius: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+.form-style-10 .inner-wrap{
+    padding: 1vw;
+    background: #F8F8F8;
+    border-radius: 6px;
+    margin-bottom: 1vw;
+	font-size: 2vw;
+}
+
+.form-style-10 label{
+    display: block;
+    font: 2vw "Courier New", Courier, monospace;
+    color: #888;
+    margin-bottom: 15px;
+}
+.form-style-10 input[type="text"],
+.form-style-10 input[type="email"],
+.form-style-10 input[type="tel"],
+.form-style-10 textarea
+{
+    display: block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 1vw;
+    border-radius: 6px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border: 2px solid #fff;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+.form-style-10 textarea{
+    min-height: 100px;
+}
+
+.form-style-10 .section{
+    font: normal 2vw "Courier New", Courier, monospace;
+    color: #2A88AD;
+    margin-bottom: 1vw;
+	margin-top: 0px;
+}
+.form-style-10 .section span {
+	display: none;		/*	les numéros ne sont pas affichés ! 	*/
+    background: #2A88AD;
+    padding: 2px 5px 2px 5px;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 2px solid #fff;
+    font-size: 2vw;
+    margin-left: -5vw;
+    color: #fff;
+    margin-top: -3px;
+}
+
+.form-style-10 input[type="submit"]{
+    background: #2A88AD;
+    padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    font: normal 30px 'Bitter', serif;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid #257C9E;
+    font-size: 15px;
+}
+
+.form-style-10 input[type="submit"]:hover{
+    background: #2A6881;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+.form-style-10 .privacy-policy{
+    float: right;
+    width: 250px;
+    font: courier New, sans-serif;
+    color: #4D4D4D;
+    margin-top: 10px;
+    text-align: right;
+}
