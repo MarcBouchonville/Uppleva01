@@ -18,26 +18,45 @@
     }
     else
     {
-        header('Location: ../pages/page07.php');
+        header('Location: ../01pages/page07.php');
         exit();
     }
     
     /*  debut traitement de renvoi vers adresse mail    */
-    $Destinataire = "pitch_marc25@hotmail.com";
-    
+
     // test de cette adresse pour éviter les spams
+    $Destinataire = "pitchhawthorn@mail.com";
     /*
-    if (!preg_match("#^[a-z0-9._-]+@(hotmail\live\msn).[a-z]{2,4}$#", $Destinataire)) {
+    if (!preg_match("#/^[a-z0-9._-]+@(hotmail\live\msn).[a-z]{2,4}$#/", $Destinataire)) {
         $sautLigne = "\r\n";
     }
     else {
         $sautLigne = "\n";
     }
     */
-    $message = "message complet";
-    $success = mail('pitch_marc25@hotmail.com', 'My Subject', $message);
-    if (!$success) {
-    $errorMessage = error_get_last()['message'];
+    // le $sautLigne n'est utilisé QUE pour le $HEADER
+    // Dans le msg ($message), les lignes sont séparées par     \n    et NE peuvent excéder 70 caractères !
+    
+    $sautLigne = "\r\n";
+    //$message = 'message complet';
+
+
+    $sujetEnvoi = "mail1stTest";
+    $message = "Nom : " . $nom . "\n" . "Prenom : " . $prenom . "\n" . "Email : " . $email . "\n" . "Téléphone : " . $telephone . "\n" . "Sujet : " . $sujet . "\n" . "Commentaire : " . $commentaire . "\n" . "Accepté : " . $acceptePerso ;
+    $header = "From:pitchhawthorn19@gmail.com \r\n";
+    $header .= "Cc:pitchhawthorn19@gmail.com \r\n";
+    $header .= "MIME-Version: 1.0\r\n";
+    $header .= "Content-type: text/html\r\n";
+
+
+    $success = mail($Destinataire, $sujetEnvoi, $message, $header);
+    if ($success == true) {
+        echo 'merci de nous avoir transmis vos coordonnées.<br>';
+        echo 'Votre réponse vous sera transmise dans les meilleurs délais<br>';
+        echo 'Bien à Vous ' . $nom . ' ' . $prenom;
+        header('Location: ../index.php');
+    } else {
+        $errorMessage = error_get_last()['message'];
     }
     
     // autre test de simple envoi de mail :
