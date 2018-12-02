@@ -89,6 +89,18 @@ article p img {
 	font-size: 2vw;
 }
 
+.contenuTableauGeneral {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 2vw;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.contenuTableauGeneral img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
 
 /* ~~ Sélecteurs d'éléments/balises ~~ */
 ul { /* En raison des variations entre les navigateurs, il est conseillé d'attribuer une valeur de zéro aux marges intérieures 

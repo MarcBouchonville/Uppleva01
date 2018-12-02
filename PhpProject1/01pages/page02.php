@@ -19,7 +19,7 @@
     <script>
 		function menumobile() {
 				bloc = document.getElementById("menu");
-				if (bloc.className == "afficher") {
+				if (bloc.className === "afficher") {
 						bloc.className = "masquer";
 					}
 				else {
