@@ -2,7 +2,7 @@
   	  <div class="colonnes_pied">
         <div class="cols_gauche">
             <div class="col_gauche_01">
-                <a href="#">mentions légales</a>
+                <a href="pageLoi.php">mentions légales</a>
             </div>
         </div>
         <div class="cols_droite">

@@ -32,6 +32,12 @@
 					}
 			}
     </script>
+    <style>
+        #ecranNrUn {
+            background-color: black;
+            color: white;
+        }
+    </style>
     
 </head>
 
@@ -47,7 +53,7 @@
         	onclick="menumobile(); return false;">Menu</a>
     <ul id="menu">
       <li>
-        <a href="#">home</a>
+        <a href="#" id="ecranNrUn">home</a>
       </li>
       <li>
         <a href="01pages/page02.php">à propos</a>
@@ -62,7 +68,7 @@
         <a href="#">projets</a>
       </li>
       <li>
-        <a href="#">inspiration</a>
+        <a href="01pages/page06">inspiration</a>
       </li>
       <li>
         <a href="01pages/page07.php">contact</a>
@@ -84,23 +90,23 @@
   	  <div class="colonnes_pied">
         <div class="cols_gauche">
             <div class="col_gauche_01">
-                <a href="#">mentions légales</a>
+                <a href="01pages/pageLoi.php">mentions légales</a>
             </div>
         </div>
         <div class="cols_droite">
             <div class="col_droite_01">
                 <a href="https://www.instagram.com/uppleva.NordicInteriorDesign" title="connexion INSTAGRAM">
-                    <img class="image_adresse" src="10images/b003.png" alt="I" width="20px" height="20px" />
+                    <img class="image_adresse" src="10images/b003.png" alt="I" width="20" height="20" />
                 </a>
             </div>
             <div class="col_droite_02">
                 <a href="https://www.linkedin.com/in/virginieandre/" title="connexion LinkedIn">
-                    <img class="image_adresse" src="10images/b002.png" alt="L" width="20px" height="20px" />
+                    <img class="image_adresse" src="10images/b002.png" alt="L" width="20" height="20" />
                 </a>
             </div>
             <div class="col_droite_03">
                 <a href="https://www.facebook.com/virginieuppleva" title="connexion Facebook">
-                    <img class="image_adresse" src="10images/b001.png" alt="F" width="20px" height="20px" />
+                    <img class="image_adresse" src="10images/b001.png" alt="F" width="20" height="20" />
                 </a>
             </div>
     	</div>
@@ -108,13 +114,13 @@
 	</footer>   <!-- end .footer -->
 </div>	  <!-- end .global -->
 	<script type="text/javascript">
-		var images = ["10images/ext001.jpg", "10images/ext002.jpg", "10images/ext003.jpg"]
+		var images = ["10images/ext001.jpg", "10images/ext002.jpg", "10images/ext003.jpg"];
 		var i=0;
 		
 		setInterval (function() {
 			document.getElementById('slider').src=images[i];
 			i++;
-			if (i==3) i=0;
+			if (i===3) i=0;
 		},2000);
 	</script>
 </body>

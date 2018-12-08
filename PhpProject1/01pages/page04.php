@@ -52,7 +52,7 @@
                       <figure>
                           <figcaption>première image d'extérieur</figcaption>
                           <img style="max-height: 200px; max-width: 200px;" alt="image extérieure 1" src="../10images/ext001.jpg">
-                          <p><a href="*">image d'intérieur</a></p>
+                          <p><a href="page04001.php">image d'intérieur</a></p>
                       </figure>
                   </td>
                   <td>

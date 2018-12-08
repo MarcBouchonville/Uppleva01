@@ -49,14 +49,17 @@
     $header .= "Content-type: text/html\r\n";
 
 
-    $success = mail($Destinataire, $sujetEnvoi, $message, $header);
+    $success = mail($Destinataire, $sujetEnvoi, $message);
     if ($success == true) {
         echo 'merci de nous avoir transmis vos coordonnées.<br>';
         echo 'Votre réponse vous sera transmise dans les meilleurs délais<br>';
         echo 'Bien à Vous ' . $nom . ' ' . $prenom;
-        header('Location: ../index.php');
+        header('Location: ../01pages/page07.php');
+        exit();
     } else {
         $errorMessage = error_get_last()['message'];
+        header('Location: ../01pages/page07.php');
+        exit();
     }
     
     // autre test de simple envoi de mail :

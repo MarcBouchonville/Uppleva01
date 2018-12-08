@@ -27,7 +27,12 @@
 					}
 			}
     </script>
-    
+    <style>
+        #ecranNrTrois {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -106,7 +111,7 @@
 							var txtA = txtA + 'background-position: center; ';
 							var txtA = txtA + 'background-repeat: no-repeat; ';
 							var txtA = txtA + 'background-size: cover; ';
-							var txtA = txtA + 'opacity: 0.6;';
+							var txtA = txtA + 'opacity: 0.7;';
 							var txtA = txtA + '">';
 							var txtA = txtA + '<div class="titreImage" style="opacity: 1;"';
 							var txtA = txtA + '>';

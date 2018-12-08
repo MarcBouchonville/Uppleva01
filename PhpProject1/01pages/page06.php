@@ -46,29 +46,26 @@
     <!--    corps de fichier    -->
   
   <section class="contenu">
-
-    <div class="contenu_page">
-    	<p>Uppleva, c'est ma seconde vie, une passion, un rêve transformé en réalité !</p><br>
-        <p>Dynamique, "épicurieuse" et passionnée, j'ai choisi de transformer mon énergie en créativité.  Toujours
-                        à la recherche de nouveautés, je suis perpétuellement en mouvement ! J'aime le changement, 
-                        l'évolution des choses.</p><br>
-        <p>Fan inconditionnelle des pays scandinaves, de leurs modes de vie et de pensée, j'ai créé Uppleva 
-                        comme une ode à la vie nordique.</p><br>
-        <p>Un projet d'aménagement ? Envie d'une touche d'originalité, de fonctionnalité et de simplicité ?
-                         Uppleva, c'est tout cela à la fois.  Je vous propose un accompagnement sur-mesure, à la portée 
-                         de votre budget, une écoute attentive de vos besoins et de vos envies.</p><br>
-        <p>Uppleva, c'est la prise en charge de vos projets professionnels.  Je mets ma créativité à votre 
-                        service.  L'image de votre entreprise est ainsi mise en évidence, en accord avec ses valeurs.</p><br>
-        <p>Uppleva, ce sont des partenaires de qualité, des marques scandinaves d'exception et, pour certaines, totalement 
-                        inédites en Belgique.</p><br>
-        <p>Uppleva, vivez l'expérience scandinave !</p><br>
-    </div>
+    <article class="contentimage fade">
+		<ul>
+    		<li><img src="../10images/ext001.jpg" alt="1ere image" id="slider" /></li>
+		</ul>
+    </article>
   </section>
-
     
     <!--    pied de page    -->
         <?php include("piedDePage.php") ?>
      <!-- end .footer -->
 </div>	  <!-- end .global -->
+	<script type="text/javascript">
+		var images = ["../10images/ext001.jpg", "../10images/ext002.jpg", "../10images/ext003.jpg", "../10images/int001.jpg", "../10images/int002.jpg", "../10images/int003.jpg"];
+		var i=0;
+		
+		setInterval (function() {
+			document.getElementById('slider').src=images[i];
+			i++;
+			if (i===6) i=0;
+		},1200);
+	</script>
 </body>
 </html>

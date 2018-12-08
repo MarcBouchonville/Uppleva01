@@ -3,25 +3,25 @@
         	onclick="menumobile(); return false;">Menu</a>
     <ul id="menu">
       <li>
-        <a href="../index.html">home</a>
+        <a href="../index.html" id="ecranNrUn">home</a>
       </li>
       <li>
-        <a href="page02.php">à propos</a>
+        <a href="page02.php" id="ecranNrDeux">à propos</a>
       </li>
       <li>
-        <a href="page03.php">services</a>
+        <a href="page03.php" id="ecranNrTrois">services</a>
       </li>
       <li>
-        <a href="page04.php">réalisations</a>
+        <a href="page04.php" id="ecranNrQuatre">réalisations</a>
       </li>
       <li>
-        <a href="#">projets</a>
+        <a href="#" id="ecranNrCinq">projets</a>
       </li>
       <li>
-        <a href="#">inspiration</a>
+          <a href="page06.php" id="ecranNrSix">inspiration</a>
       </li>
       <li>
-        <a href="page07.php">contact</a>
+        <a href="page07.php" id="ecranNrSept">contact</a>
 <!-- end .sidebar1 -->
       </li>
     </ul>
