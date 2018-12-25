@@ -25,7 +25,7 @@
     /*  debut traitement de renvoi vers adresse mail    */
 
     // test de cette adresse pour éviter les spams
-    $Destinataire = "pitchhawthorn@mail.com";
+    $Destinataire = "pitchhawthorn@gmail.com";
     /*
     if (!preg_match("#/^[a-z0-9._-]+@(hotmail\live\msn).[a-z]{2,4}$#/", $Destinataire)) {
         $sautLigne = "\r\n";
@@ -54,7 +54,7 @@
         echo 'merci de nous avoir transmis vos coordonnées.<br>';
         echo 'Votre réponse vous sera transmise dans les meilleurs délais<br>';
         echo 'Bien à Vous ' . $nom . ' ' . $prenom;
-        header('Location: ../01pages/page07.php');
+        // header('Location: ../01pages/page07.php');
         exit();
     } else {
         $errorMessage = error_get_last()['message'];
