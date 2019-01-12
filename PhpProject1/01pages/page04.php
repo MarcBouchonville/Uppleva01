@@ -42,45 +42,42 @@
 
     <!--    corps de fichier    -->
 
-  <section class="contenu">
+  <section class="contenuPage4">
 
 
-      <table class="contenuTableauGeneral">
-          <tbody>
-              <tr>
-                  <td>
-                      <figure>
-                          <figcaption>première image d'extérieur</figcaption>
-                          <img style="max-height: 200px; max-width: 200px;" alt="image extérieure 1" src="../10images/ext001.jpg">
-                          <p><a href="page04001.php">image d'intérieur</a></p>
-                      </figure>
-                  </td>
-                  <td>
-                      <figure>
-                          <figcaption>seconde image d'extérieur</figcaption>
-                          <img style="max-height: 200px; max-width: 200px;" alt="image extérieure 2" src="../10images/ext002.jpg">
-                          <p>Décoration par Virginie André</p>
-                      </figure>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <figure>
-                          <figcaption>première image d'intérieur</figcaption>
-                          <img style="max-height: 200px; max-width: 200px;" alt="image interieure 4" src="../10images/int004.jpg">
-                          <p><a href='*'>collection pour ce type d'images</a></p>
-                      </figure>
-                  </td>
-                  <td>
-                      <figure>
-                          <figcaption>seconde image d'intérieur</figcaption>
-                          <img style="max-height: 200px; max-width: 200px;" alt="image interieure 5" src="../10images/int005.jpg">
-                          <p><a href='*'>collection pour ce type d'images</a></p>
-                      </figure>
-                  </td>
-              </tr>
-          </tbody>
-      </table>
+      <div class="ligne1">
+          <div class="ligne2">
+              <figure>
+                  <img style="max-height: 200px; max-width: 200px;" alt="La Barrière de Transinne" src="../10images/ext001.jpg">
+                  <p><a href="page04001.php">La Barrière de Transinne</a></p>
+              </figure>
+              <figure>
+                  <img style="max-height: 200px; max-width: 200px;" alt="Noël" src="../10images/ext002.jpg">
+                  <p><a href="page04001.php">Noël</a></p>
+              </figure>
+          </div>
+          <div class="ligne2">
+              <figure>
+                  <img style="max-height: 200px; max-width: 200px;" alt="Maison unifamiliale" src="../10images/int004.jpg">
+                  <p><a href="page04001.php">Maison unifamiliale</a></p>
+              </figure>
+              <figure>
+                  <img style="max-height: 200px; max-width: 200px;" alt="Evènementiel" src="../10images/int005.jpg">
+                  <p><a href="page04001.php">Evènementiel</a></p>
+              </figure>
+
+          </div>
+          <div class="ligne2">
+              <figure>
+                  <img style="max-height: 200px; max-width: 200px;" alt="Conseil" src="../10images/int005.jpg">
+                  <p><a href="page04001.php">Conseil</a></p>
+              </figure>
+              <figure>
+                  <img style="max-height: 200px; max-width: 200px;" alt="Appartement bruxellois" src="../10images/int005.jpg">
+                  <p><a href="page04001.php">Appartement bruxellois</a></p>
+              </figure>
+          </div>
+      </div>
       
   </section>
 
