@@ -23,7 +23,7 @@ body {
 .global {
 	/*width: 100%;*/
 	
-	max-width: 950px;/* une valeur « max-width » peut s'avérer utile pour éviter que cette mise en page ne soit trop large 
+	max-width: 1300px;/* une valeur « max-width » peut s'avérer utile pour éviter que cette mise en page ne soit trop large 
 						sur un moniteur de grande taille. La lisibilité de la longueur de ligne est ainsi améliorée. IE6 ne tient 
 						pas compte de cette déclaration. */
 	/*min-width: 100px;*/
@@ -88,44 +88,18 @@ article p img {
 	font-family: "Courier New", Courier, monospace;
 	font-size: 2vw;
 }
-/*
-.contenuTableauGeneral {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 2vw;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.contenuTableauGeneral img {
-    max-height: 100%;
-    max-width: 100%;
-}
-*/
-
-/* en remplacement du tableau general : ligne1 et ligne2 */
-
-.contenuPage4 {
-	display: inline-block;
-        font-size: 2vw;
-	padding: 2% 1% 2% 1%;
-	max-width: 60%;
-	/*max-height: 70%;*/
-	float: right;
-	overflow-y: scroll;
-        border: 2px solid red;
-}
 
 
-.ligne1 {
+#contenuPage4 {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.ligne2 {
-    display: flex;
-    flex-wrap: wrap;    /*  affichage en ligne, et passe à la ligne suivante si
-                            fenetre trop petite */
+#contenuPage4 figure {
+    display: inline;
+    /*border: 1px solid black;*/
 }
+
 
 /* ~~ Sélecteurs d'éléments/balises ~~ */
 ul { /* En raison des variations entre les navigateurs, il est conseillé d'attribuer une valeur de zéro aux marges intérieures 

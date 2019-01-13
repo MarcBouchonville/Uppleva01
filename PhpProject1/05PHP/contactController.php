@@ -6,14 +6,17 @@
         // si $valid N'est PAS NULL, alors ces data sont remplies
         // nettoyage et assignation
         
-        $nom01 = filter_input(INPUT_POST, 'Nom', FILTER_SANITIZE_STRING);
+        // puis nettoyage avec strip_tags pour retirer les problèmes de code
+        // PHP ou HTML encodé dans les data transmises !
+        
+        $nom01 = strip_tags(filter_input(INPUT_POST, 'Nom', FILTER_SANITIZE_STRING));
         $nom = mb_strtoupper($nom01, 'UTF-8');
-        $prenom01 = filter_input(INPUT_POST, 'Prenom', FILTER_SANITIZE_STRING);
+        $prenom01 = strip_tags(filter_input(INPUT_POST, 'Prenom', FILTER_SANITIZE_STRING));
         $prenom = ucwords($prenom01);
-        $email = filter_input(INPUT_POST, 'Email', FILTER_SANITIZE_EMAIL);
-        $telephone = filter_input(INPUT_POST, 'Telephone', FILTER_SANITIZE_STRING);
-        $sujet = filter_input(INPUT_POST, 'Sujet', FILTER_SANITIZE_STRING);
-        $commentaire = filter_input(INPUT_POST, 'Comment', FILTER_SANITIZE_STRING);
+        $email = strip_tags(filter_input(INPUT_POST, 'Email', FILTER_SANITIZE_EMAIL));
+        $telephone = strip_tags(filter_input(INPUT_POST, 'Telephone', FILTER_SANITIZE_STRING));
+        $sujet = strip_tags(filter_input(INPUT_POST, 'Sujet', FILTER_SANITIZE_STRING));
+        $commentaire = strip_tags(filter_input(INPUT_POST, 'Comment', FILTER_SANITIZE_STRING));
         $acceptePerso = filter_input(INPUT_POST, 'acceptePerso', FILTER_VALIDATE_BOOLEAN);
     }
     else

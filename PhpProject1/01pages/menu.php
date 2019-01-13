@@ -15,7 +15,7 @@
         <a href="page04.php" id="ecranNrQuatre">réalisations</a>
       </li>
       <li>
-        <a href="#" id="ecranNrCinq">projets</a>
+        <a href="page05.php" id="ecranNrCinq">projets</a>
       </li>
       <li>
           <a href="page06.php" id="ecranNrSix">inspiration</a>
