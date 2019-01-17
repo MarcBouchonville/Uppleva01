@@ -48,7 +48,7 @@
   <section class="contenu">
     <article class="contentimage fade">
 		<ul>
-    		<li><img src="../10images/001_inspiration/phinsp001.jpg" alt="1ere image" id="slider" /></li>
+    		<li><img src="../10images/001_inspiration/image020.jpg" alt="1ere image" id="slider" /></li>
 		</ul>
     </article>
   </section>
@@ -58,7 +58,7 @@
      <!-- end .footer -->
 </div>	  <!-- end .global -->
 	<script type="text/javascript">
-		var images = ["../10images/001_inspiration/phinsp001.jpg", "../10images/001_inspiration/phinsp002.jpg", "../10images/001_inspiration/phinsp003.jpg", "../10images/001_inspiration/phinsp004Banquette.png", "../10images/001_inspiration/phinsp005Bureau.png", "../10images/001_inspiration/phinsp006Capture.jpg", "../10images/001_inspiration/phinsp007Coin-tv.png", "../10images/001_inspiration/phinsp008Cuisine.png", "../10images/001_inspiration/phinsp009.jpg", "../10images/001_inspiration/phinsp010Escalier.png", "../10images/001_inspiration/phinsp011Garde-manger.png", "../10images/001_inspiration/phinsp012Grenier.png", "../10images/001_inspiration/phinsp013.jpg", "../10images/001_inspiration/phinsp014.jpg"];
+		var images = ["../10images/001_inspiration/image020.jpg", "../10images/001_inspiration/image021.jpg", "../10images/001_inspiration/image022.jpg", "../10images/001_inspiration/image023.png", "../10images/001_inspiration/image024.png", "../10images/001_inspiration/image025.jpg", "../10images/001_inspiration/image026.png", "../10images/001_inspiration/image027.png", "../10images/001_inspiration/image028.jpg", "../10images/001_inspiration/image029.png", "../10images/001_inspiration/image030.png", "../10images/001_inspiration/image031.png", "../10images/001_inspiration/image032.jpg", "../10images/001_inspiration/image033.jpg"];
 		var i=0;
 		
 		setInterval (function() {

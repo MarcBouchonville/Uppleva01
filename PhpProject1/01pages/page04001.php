@@ -32,7 +32,7 @@
   <section class="contenu">
     <article class="contentimage fade">
 		<ul>
-    		<li><img src="../10images/ext001.jpg" alt="1ere image" id="slider" /></li>
+    		<li><img src="../10images/image006.jpg" alt="1ere image" id="slider" /></li>
 		</ul>
     </article>
   </section>
@@ -45,7 +45,7 @@
 </div>	  <!-- end .global -->
 
 	<script type="text/javascript">
-		var images = ["../10images/ext001.jpg", "../10images/ext002.jpg", "../10images/ext003.jpg"];
+		var images = ["../10images/image006.jpg", "../10images/image007.jpg", "../10images/image008.jpg"];
 		var i=0;
 		
 		setInterval (function() {

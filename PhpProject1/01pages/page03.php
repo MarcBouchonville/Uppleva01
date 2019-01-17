@@ -108,7 +108,7 @@
                     var largeurWindow = window.screen.availWidth;
                     var hauteurWindow = window.screen.availHeight;
                     var myWindow = window.open("", "Uppleva - et votre entreprise", "width=largeurWindow,height=hauteurWindow, titlebar=no, location=yes, menubar=no, resizable=yes, status=yes");
-                    var txtA = '<div id="monImage001" style="background-image: url(../10images/ext003.jpg); ';
+                    var txtA = '<div id="monImage001" style="background-image: url(../10images/image008.jpg); ';
                     var txtA = txtA + 'height: 598px; ';
                     var txtA = txtA + 'background-position: center; ';
                     var txtA = txtA + 'background-repeat: no-repeat; ';

@@ -47,12 +47,12 @@
 
 <!--      <div id="contenuPage4">   -->
               <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="La Barrière de Transinne" src="../10images/002_Realisations_La-Barriere-de-Transinne/phRealTransinne001.jpg">
+                  <img style="max-height: 200px; max-width: 200px;" alt="La Barrière de Transinne" src="../10images/002_Realisations_La-Barriere-de-Transinne/image045.jpg">
                   <figcaption><a href="page04001.php">La Barrière de Transinne</a></figcaption>
                   <!-- <p><a href="page04001.php">La Barrière de Transinne</a></p>  -->
               </figure>
               <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="Noël" src="../10images/003_Realisations_Noel/phRealNoel001.jpg">
+                  <img style="max-height: 200px; max-width: 200px;" alt="Noël" src="../10images/003_Realisations_Noel/image060.jpg">
                   <figcaption><a href="page04001.php">Noël</a></figcaption>
               </figure>
               <figure>
