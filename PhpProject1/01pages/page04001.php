@@ -14,7 +14,7 @@
 	<!-- <link href="02CSS/Style001.css" rel="stylesheet" media="all" /> -->
     <link href="../02CSS/Style001.css" rel="stylesheet" media="only screen and (min-width: 640px)" />
     <link href="../02CSS/Style002.css" rel="stylesheet" media="only screen and (max-width: 639px)" />
-    <link href="../02CSS/Style002.css" rel="stylesheet" media="handeld" />
+    <link href="../02CSS/Style002.css" rel="stylesheet" media="screen and (max-width: 639px) and handheld" />
     
     <!-- <link href="../02css/style007.css" rel="stylesheet" type="text/css"/>	-->
     
@@ -32,7 +32,7 @@
   <section class="contenu">
     <article class="contentimage fade">
 		<ul>
-    		<li><img src="../10images/image006.jpg" alt="1ere image" id="slider" /></li>
+    		<li><img src="../10images/002_Realisations_La-Barriere-de-Transinne/image045.jpg" alt="1ere image" id="slider" /></li>
 		</ul>
     </article>
   </section>
@@ -45,13 +45,13 @@
 </div>	  <!-- end .global -->
 
 	<script type="text/javascript">
-		var images = ["../10images/image006.jpg", "../10images/image007.jpg", "../10images/image008.jpg"];
+		var images = ["../10images/002_Realisations_La-Barriere-de-Transinne/image045.jpg", "../10images/002_Realisations_La-Barriere-de-Transinne/image046.jpg", "../10images/002_Realisations_La-Barriere-de-Transinne/image047.jpg", "../10images/002_Realisations_La-Barriere-de-Transinne/image048.jpg", "../10images/002_Realisations_La-Barriere-de-Transinne/image049.jpg"];
 		var i=0;
 		
 		setInterval (function() {
 			document.getElementById('slider').src=images[i];
 			i++;
-			if (i===3) i=0;
+			if (i===5) i=0;
 		},1500);
 	</script>
 

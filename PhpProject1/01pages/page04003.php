@@ -16,23 +16,8 @@
     <link href="../02CSS/Style002.css" rel="stylesheet" media="only screen and (max-width: 639px)" />
     <link href="../02CSS/Style002.css" rel="stylesheet" media="screen and (max-width: 639px) and handheld" />
     
-    <script>
-		function menumobile() {
-				bloc = document.getElementById("menu");
-				if (bloc.className === "afficher") {
-						bloc.className = "masquer";
-					}
-				else {
-						bloc.className = "afficher";
-					}
-			}
-    </script>
-    <style>
-        #ecranNrDeux {
-            background-color: black;
-            color: white;
-        }
-    </style>
+    <!-- <link href="../02css/style007.css" rel="stylesheet" type="text/css"/>	-->
+    
 </head>
 
 <body>
@@ -41,31 +26,34 @@
 
         <?php include("entete.php"); ?>
 
-        <?php include("menu.php"); ?>
 
     <!--    corps de fichier    -->
-  
+
   <section class="contenu">
     <article class="contentimage fade">
 		<ul>
-                    <li><img src="../10images/008_Projets/image150.jpg" alt="1ere image" id="slider" /></li>
+                    <li><img src="../10images/004_Realisations_Maison-unifamiliale/image100.jpg" alt="1ere image" id="slider" /></li>
 		</ul>
     </article>
   </section>
-    
+  <button>
+        <a href="page04.php">Retour</a>
+  </button>
     <!--    pied de page    -->
         <?php include("piedDePage.php") ?>
      <!-- end .footer -->
 </div>	  <!-- end .global -->
+
 	<script type="text/javascript">
-		var images = ["../10images/008_Projets/image150.jpg", "../10images/008_Projets/image151.jpg", "../10images/008_Projets/image152.jpg", "../10images/008_Projets/image153.jpg", "../10images/008_Projets/image154.jpg", "../10images/008_Projets/image155.jpg", "../10images/008_Projets/image156.jpg", "../10images/008_Projets/image157.jpg", "../10images/008_Projets/image158.jpg", "../10images/008_Projets/image159.jpg", "../10images/008_Projets/image160.jpg", "../10images/008_Projets/image161.jpg", "../10images/008_Projets/image162.jpg", "../10images/008_Projets/image163.jpg", "../10images/008_Projets/image164.jpg", "../10images/008_Projets/image165.jpg", "../10images/008_Projets/image166.jpg", "../10images/008_Projets/image167.jpg", "../10images/008_Projets/image168.jpg", "../10images/008_Projets/image169.jpg"];
+		var images = ["../10images/004_Realisations_Maison-unifamiliale/image100.jpg", "../10images/004_Realisations_Maison-unifamiliale/image101.jpg", "../10images/004_Realisations_Maison-unifamiliale/image102.jpg", "../10images/004_Realisations_Maison-unifamiliale/image103.jpg", "../10images/004_Realisations_Maison-unifamiliale/image104.jpg", "../10images/004_Realisations_Maison-unifamiliale/image105.jpg"];
 		var i=0;
 		
 		setInterval (function() {
 			document.getElementById('slider').src=images[i];
 			i++;
-			if (i===20) i=0;
-		},1200);
+			if (i===6) i=0;
+		},1500);
 	</script>
+
 </body>
 </html>

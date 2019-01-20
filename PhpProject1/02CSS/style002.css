@@ -19,7 +19,7 @@ body, div, ul {
 	}
 	
 .global {
-	max-width: 950px;
+	max-width: 639px;
 	background-color: #ECECEC;
 	margin: 0 auto;
 	}
@@ -126,8 +126,8 @@ article {
 .pied {
 	padding: 10%;
 	background-color: #ECECEC;
-	position: relative;/* donne hasLayout à IE6 de façon à permettre un effacement correct */
-	clear: both; /* cette propriété d'effacement force le .container à comprendre où se terminent les colonnes et à les contenir */
+	position: relative;/* donne hasLayout Ã  IE6 de faÃ§on Ã  permettre un effacement correct */
+	clear: both; /* cette propriÃ©tÃ© d'effacement force le .container Ã  comprendre oÃ¹ se terminent les colonnes et Ã  les contenir */
 }
 
 
@@ -137,7 +137,7 @@ article {
     flex-direction: row;
     -webkit-flex-direction: row;
     bottom: 0;
-    /*  ajouté ce 18-08-2018    */
+    /*  ajoutÃ© ce 18-08-2018    */
     position: relative;
     width: 100%;
 	height: 0%;
@@ -224,7 +224,7 @@ article {
 	margin-top: 0px;
 }
 .form-style-10 .section span {
-	display: none;		/*	les numéros ne sont pas affichés ! 	*/
+	display: none;		/*	les numÃ©ros ne sont pas affichÃ©s ! 	*/
     background: #2A88AD;
     padding: 2px 5px 2px 5px;
     position: absolute;
