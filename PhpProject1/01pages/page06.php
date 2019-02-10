@@ -47,7 +47,7 @@
   <section class="contenu">
     <article class="contentimage fade">
 		<ul>
-    		<li><img src="../10images/001_inspiration/image020.jpg" alt="1ere image" id="slider" /></li>
+    		<li><img src="../10images/001_inspiration/image021.jpg" alt="1ere image" id="slider" /></li>
 		</ul>
     </article>
   </section>
@@ -57,13 +57,13 @@
      <!-- end .footer -->
 </div>	  <!-- end .global -->
 	<script type="text/javascript">
-		var images = ["../10images/001_inspiration/image020.jpg", "../10images/001_inspiration/image021.jpg", "../10images/001_inspiration/image022.jpg", "../10images/001_inspiration/image023.png", "../10images/001_inspiration/image024.png", "../10images/001_inspiration/image025.jpg", "../10images/001_inspiration/image026.png", "../10images/001_inspiration/image027.png", "../10images/001_inspiration/image028.jpg", "../10images/001_inspiration/image029.png", "../10images/001_inspiration/image030.png", "../10images/001_inspiration/image031.png", "../10images/001_inspiration/image032.jpg", "../10images/001_inspiration/image033.jpg"];
+		var images = ["../10images/001_inspiration/image021.jpg", "../10images/001_inspiration/image023.png", "../10images/001_inspiration/image024.png", "../10images/001_inspiration/image026.png", "../10images/001_inspiration/image027.png", "../10images/001_inspiration/image029.png", "../10images/001_inspiration/image030.png", "../10images/001_inspiration/image031.png"];
 		var i=0;
 		
 		setInterval (function() {
 			document.getElementById('slider').src=images[i];
 			i++;
-			if (i===14) i=0;
+			if (i===8) i=0;
 		},1200);
 	</script>
 </body>

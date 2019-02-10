@@ -47,29 +47,25 @@
 
 <!--      <div id="contenuPage4">   -->
               <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="La Barrière de Transinne" src="../10images/002_Realisations_La-Barriere-de-Transinne/image045b.jpg">
-                  <figcaption><a href="page04001.php">La Barrière de <wbr>Transinne</a></figcaption>
+                  <img style="max-height: 200px; max-width: 200px;" alt="La Barrière de Transinne" src="../10images/002_Realisations_La-Barriere-de-Transinne/image045b.jpg" title="La Barrière de Transinne">
+                  <figcaption><a href="page04001.php"></a></figcaption>
                   <!-- <p><a href="page04001.php">La Barrière de Transinne</a></p>  -->
               </figure>
               <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="Noël" src="../10images/003_Realisations_Noel/image060b.jpg">
-                  <figcaption><a href="page04002.php">Noël</a></figcaption>
+                  <img style="max-height: 200px; max-width: 200px;" alt="Noël" src="../10images/003_Realisations_Noel/image060b.jpg" title="Noël">
+                  <figcaption><a href="page04002.php"></a></figcaption>
               </figure>
               <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="Maison unifamiliale" src="../10images/004_Realisations_Maison-unifamiliale/image100b.jpg">
-                  <figcaption><a href="page04003.php">Maison unifamiliale</a></figcaption>
+                  <img style="max-height: 200px; max-width: 200px;" alt="Maison unifamiliale" src="../10images/004_Realisations_Maison-unifamiliale/image100b.jpg" title="Maison unifamiliale">
+                  <figcaption><a href="page04003.php"></a></figcaption>
               </figure>
               <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="Evènementiel" src="../10images/005_Realisations_evenementiel/image110b.jpg">
-                  <figcaption><a href="page04004.php">Evènementiel</a></figcaption>
+                  <img style="max-height: 200px; max-width: 200px;" alt="Evènementiel" src="../10images/005_Realisations_evenementiel/image110b.jpg" title="Evènementiel">
+                  <figcaption><a href="page04004.php"></a></figcaption>
               </figure>
               <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="Conseil" src="../10images/006_Realisations_Conseil/image130b.jpg">
-                  <figcaption><a href="page04005.php">Conseil</a></figcaption>
-              </figure>
-              <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="Appartement bruxellois" src="../10images/007_Realisations_appartement-bruxellois/image140b.JPG">
-                  <figcaption><a href="page04006.php">Appartement bruxellois</a></figcaption>
+                  <img style="max-height: 200px; max-width: 200px;" alt="Appartement bruxellois" src="../10images/007_Realisations_appartement-bruxellois/image140b.JPG" title="Appartement bruxellois">
+                  <figcaption><a href="page04006.php"></a></figcaption>
               </figure>
  <!--         </div>    -->
       

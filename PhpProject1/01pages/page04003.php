@@ -45,14 +45,14 @@
 </div>	  <!-- end .global -->
 
 	<script type="text/javascript">
-		var images = ["../10images/004_Realisations_Maison-unifamiliale/image100.jpg", "../10images/004_Realisations_Maison-unifamiliale/image101.jpg", "../10images/004_Realisations_Maison-unifamiliale/image102.jpg", "../10images/004_Realisations_Maison-unifamiliale/image103.jpg", "../10images/004_Realisations_Maison-unifamiliale/image104.jpg", "../10images/004_Realisations_Maison-unifamiliale/image105.jpg"];
+		var images = ["../10images/004_Realisations_Maison-unifamiliale/image100.jpg", "../10images/004_Realisations_Maison-unifamiliale/image101.jpg", "../10images/004_Realisations_Maison-unifamiliale/image103.jpg"];
 		var i=0;
 		
 		setInterval (function() {
 			document.getElementById('slider').src=images[i];
 			i++;
-			if (i===6) i=0;
-		},1500);
+			if (i===3) i=0;
+		},1200);
 	</script>
 
 </body>
