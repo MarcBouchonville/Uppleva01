@@ -1,0 +1,129 @@
+<?php
+    $page_en_cours = "index";
+?>
+
+<!doctype html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="author" content="Marc Bouchonville" />
+   <meta name="date" content="2018-11-15" scheme="YYYY-MM-DD" />
+   <meta name="expires" content="1 November 2018 " />
+   <meta name="keywords" lang="fr" content="Uppleva, design, meuble, mobilier, projet d'aménagement, originalité, Virginie André" />
+   <meta lang="fr" name="description" content="Uppleva, vivez l'expérience scandinave" />
+   <meta lang="en" name="description" content="Uppelva, live Scandinavian experience" />
+<title>Uppleva</title>
+	<!-- <link href="02CSS/Style001.css" rel="stylesheet" media="all" /> -->
+    <link href="02CSS/Style001.css" rel="stylesheet" media="only screen and (min-width: 640px)" />
+    <link href="02CSS/Style002.css" rel="stylesheet" media="only screen and (max-width: 639px)" />
+    <link href="02CSS/Style002.css" rel="stylesheet" media="screen and (max-width: 639px) and handheld" />
+
+    <!--	pour le défilement des images : ces 2 meta suivants : -->
+    <!--   <meta HTTP-EQUIV="Pragma" content="no-cache"> -->
+    
+    <script>
+		function menumobile() {
+				bloc = document.getElementById("menu");
+				if (bloc.className === "afficher") {
+						bloc.className = "masquer";
+					}
+				else {
+						bloc.className = "afficher";
+					}
+			}
+    </script>
+    <style>
+        #ecranNrUn {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+<div class="global">
+  <header class="entete">
+       	<img id="Insert_logo" src="10images/image001.png" alt="Uppleva" name="Insert_logo" />
+  </header><!-- end .header -->
+  
+  <nav class="blocmenu">
+   	<a href="#" id="menutitre" class="mobile" 
+        	onclick="menumobile(); return false;">Menu</a>
+    <ul id="menu">
+      <li <?php if ($page_en_cours == 'index') {echo ' id="en-cours"';} ?>>
+        <a href="#">home</a>
+      </li>
+      <li <?php if ($page_en_cours == 'page02') {echo ' id="en-cours"';} ?>>
+        <a href="01pages/page02.php">à propos</a>
+      </li>
+      <li <?php if ($page_en_cours == 'page03') {echo ' id="en-cours"';} ?>>
+        <a href="01pages/page03.php">services</a>
+      </li>
+      <li <?php if ($page_en_cours == 'page04') {echo ' id="en-cours"';} ?>>
+        <a href="01pages/page04.php">réalisations</a>
+      </li>
+      <li <?php if ($page_en_cours == 'page05') {echo ' id="en-cours"';} ?>>
+        <a href="01pages/page05.php">projets</a>
+      </li>
+      <li <?php if ($page_en_cours == 'page06') {echo ' id="en-cours"';} ?>>
+        <a href="01pages/page06">inspiration</a>
+      </li>
+      <li <?php if ($page_en_cours == 'page07') {echo ' id="en-cours"';} ?>>
+        <a href="01pages/page07.php">contact</a>
+<!-- end .sidebar1 -->
+      </li>
+    </ul>
+  </nav>	<!-- fin du menu de navigation -->
+
+  <section class="contenu">
+    <article class="contentimage fade">
+		<ul>
+    		<li><img src="10images/image006.jpg" alt="1ere image" id="slider" /></li>
+		</ul>
+    </article>
+  </section>
+
+
+  <footer class="pied">
+  	  <div class="colonnes_pied">
+        <div class="cols_gauche">
+            <div class="col_gauche_01">
+                <a href="01pages/pageLoi.php">mentions légales</a>
+            </div>
+        </div>
+        <div class="cols_droite">
+            <div class="col_droite_01">
+                <a href="https://www.instagram.com/uppleva.NordicInteriorDesign" title="connexion INSTAGRAM">
+                    <img class="image_adresse" src="10images/image005.png" alt="I" width="20" height="20" />
+                </a>
+            </div>
+            <div class="col_droite_02">
+                <a href="https://www.linkedin.com/in/virginieandre/" title="connexion LinkedIn">
+                    <img class="image_adresse" src="10images/image004.png" alt="L" width="20" height="20" />
+                </a>
+            </div>
+            <div class="col_droite_03">
+                <a href="https://www.facebook.com/virginieuppleva" title="connexion Facebook">
+                    <img class="image_adresse" src="10images/image003.png" alt="F" width="20" height="20" />
+                </a>
+            </div>
+    	</div>
+     </div>
+	</footer>   <!-- end .footer -->
+</div>	  <!-- end .global -->
+	<script type="text/javascript">
+		var images = ["10images/image006.jpg", "10images/image007.jpg", "10images/image008.jpg"];
+		var i=0;
+		
+		setInterval (function() {
+			document.getElementById('slider').src=images[i];
+			i++;
+			if (i===3) i=0;
+		},1500);
+	</script>
+</body>
+</html>

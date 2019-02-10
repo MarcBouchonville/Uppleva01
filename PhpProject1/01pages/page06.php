@@ -26,12 +26,7 @@
 					}
 			}
     </script>
-    <style>
-        #ecranNrDeux {
-            background-color: black;
-            color: white;
-        }
-    </style>
+
 </head>
 
 <body>
@@ -40,7 +35,10 @@
 
         <?php include("entete.php"); ?>
 
-        <?php include("menu.php"); ?>
+        <?php 
+            $page_en_cours="page06";
+            include("menu.php");
+        ?>
 
     <!--    corps de fichier    -->
   

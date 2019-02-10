@@ -54,6 +54,13 @@ Il contient un espace réservé pour une image, qui doit être remplacé par vot
 	padding-bottom: 5%;
 	padding-top: 2%;
 }
+
+#en-cours a {
+    background-color: blue;
+    font-weight: bold;
+    color: red;
+}
+
 .contenu {
 	font-size: 2vw;
 	padding: 2% 1% 2% 1%;

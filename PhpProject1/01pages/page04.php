@@ -38,7 +38,10 @@
 
         <?php include("entete.php"); ?>
 
-        <?php include("menu.php"); ?>
+        <?php 
+            $page_en_cours="page04";
+            include("menu.php");
+        ?>
 
     <!--    corps de fichier    -->
 
