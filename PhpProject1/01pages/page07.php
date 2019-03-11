@@ -73,7 +73,7 @@
                     <label>J'accepte que mes données personnelles soient conservées et utilisées par Uppleva</label>
                 </div>
             <div class="button-section">
-                <input type="submit" name="envoyer" />
+                <input type="submit" name="envoyer" value='envoyer' />
             </div>
             
             <div class="section"></div>
