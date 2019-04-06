@@ -61,7 +61,7 @@ $page_en_cours = "page10";
         ?>
         <br>
         <?php
-            echo '<a href="logout.php">RETOUR</a>';
+            echo '<a href="../index.php">RETOUR</a>';
                 // fichier logout.php ==> encore à faire = pour terminer avec $_SESSIO? !!!
                 // puis retour au fichier index.php
         ?>
@@ -78,7 +78,7 @@ $page_en_cours = "page10";
 <?php 
     } else {
         echo 'Vous n\'êtes pas enregistré';
-        echo '<a href="logout.php">RETOUR</a>';
+        echo '<a href="../index.php">RETOUR</a>';
     }
 ?>
 </body>

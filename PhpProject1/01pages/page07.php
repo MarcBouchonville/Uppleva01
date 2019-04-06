@@ -48,7 +48,7 @@
   <section class="contenu">
 
     <div class="form-style-10">
-        <form action="../05php/contactController.php" method="POST">
+        <form action="../05PHP/contactController.php" method="POST">
             <div class="section"><span>1</span>Identité</div>
                 <div class="inner-wrap">
                     <label>Nom</label>
