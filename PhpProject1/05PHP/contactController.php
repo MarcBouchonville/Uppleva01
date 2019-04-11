@@ -2,24 +2,31 @@
 
     /*  formulaire page05.php rempli ?  */
 
-    $nomrecu = $_POST["Nom"];
-    $emailrecu = $_POST["Email"];
-    if (isset($_POST['acceptePerso'])) {
-        $acceptepersonne = true;
+    if (isset($_POST['Nom']) && $_POST['Nom'] != "" && isset($_POST['Email']) && $_POST['Email'] != "") {
+        $valid = TRUE;
     }
     else
     {
-        $acceptepersonne = false;
+        $valid = FALSE;
     }
-    $valid = isset($nomrecu) && isset($emailrecu);
 
-    $personne = array();
-    
-    
+    $nomrecu = $_POST["Nom"];
+    $emailrecu = $_POST["Email"];
     
     // if (!$_POST('Nom') === null || !$_POST('Nom') === "");
     
     if ($valid) {
+        // INITIALISATION
+        $personne = array();
+        $tableau = array();
+        if (isset($_POST['acceptePerso'])) {
+            $acceptepersonne = TRUE;
+        }
+        else
+        {
+            $acceptepersonne = FALSE;
+        }
+
         // si $valid n'est PAS NULL, alors ces data sont remplies
         // nettoyage et assignation
         
