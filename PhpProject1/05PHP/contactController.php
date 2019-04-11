@@ -10,10 +10,6 @@
         $valid = FALSE;
     }
 
-    $nomrecu = $_POST["Nom"];
-    $emailrecu = $_POST["Email"];
-    
-    // if (!$_POST('Nom') === null || !$_POST('Nom') === "");
     
     if ($valid) {
         // INITIALISATION
@@ -29,15 +25,26 @@
 
         // si $valid n'est PAS NULL, alors ces data sont remplies
         // nettoyage et assignation
-        
+        // + vérification des champs pour la sécurité
+                
+        $_POST['Nom'] = strip_tags($_POST['Nom']);
         $nom01 = filter_input(INPUT_POST,'Nom',FILTER_SANITIZE_STRING);
         $personne['nom'] = mb_strtoupper($nom01,'UTF-8');
+        
+        $_POST['Prenom'] = strip_tags($_POST['Prenom']);
         $prenom01 = filter_input(INPUT_POST,'Prenom',FILTER_SANITIZE_STRING);
         $personne['prenom'] = ucwords($prenom01);
         $personne['email'] = filter_input(INPUT_POST,'Email',FILTER_SANITIZE_EMAIL);
+        
+        $_POST['Telephone'] = strip_tags($_POST['Telephone']);
         $personne['telephone'] = filter_input(INPUT_POST,'Telephone',FILTER_SANITIZE_STRING);
+        
+        $_POST['Sujet'] = strip_tags($_POST['Sujet']);
         $personne['sujet'] = filter_input(INPUT_POST,'Sujet',FILTER_SANITIZE_STRING);
+        
+        $_POST['Comment'] = strip_tags($_POST['Comment']);
         $personne['commentaire'] = filter_input(INPUT_POST,'Comment',FILTER_SANITIZE_STRING);
+        
         $personne['accepte'] = 0;
 
         if ($acceptepersonne) {
@@ -52,17 +59,9 @@
     }
     else
     {
-        header('Location: ../01pages/page05.php');
+        header('Location: ../01pages/page10.php');
         exit();
     }
-    
-
-    /*  listing des data    */
-    
-    echo ("data 1 = " . $personne['nom']);
-    echo ("prenom = " . $personne['prenom']);
-    echo ("   ---------------------    ");
-    
     
     
     /*  debut traitement PHP    */
@@ -76,11 +75,34 @@
         
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
+        // 1) recherche de la personne dans la table tvisiteurs
+        // pour éviter les doublons !
+        $nom02 = $personne['nom'];
+        $prenom02 = $personne['prenom'];
+        $email02 = $personne['email'];
         
+        
+        $requete = $pdo->query('SELECT * FROM tvisiteurs WHERE Nom LIKE ' . $nom02 . ' AND Prenom LIKE ' . $prenom02 . ' AND Email LIKE ' . $email02 . ';');
+        
+        $tableau = $requete->fetch();
+        // nb d'enregs dans tableau > 0 si le user existe déjà !
+        
+        if (sizeof($tableau) > 0) {
+            session_start();
+            $_SESSION['tonNom'] = $personne['nom'];
+            $_SESSION['tonPrenom'] = $personne['prenom'];
+            $_SESSION['tonEmail'] = $personne['email'];
+            header('location: ../01pages/pageErr001.php');
+            exit();
+        }
+        else
+        {
+            
+        
+        // si aucun enreg trouvé dans tvisiteurs
+
        //  statements :
         
-        // $sql = "INSERT INTO `tvisiteurs`(`IdVisiteur`, `Nom`, `Prenom`, `Email`, `Telephone`, `Sujet`, `Commentaire`, `Accepte`, `DataPersoConservees`, `Suivi`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7])";
-        // $sql = "INSERT INTO `tvisiteurs`(`Nom`, `Prenom`, `Email`, `Telephone`, `Sujet`, `Commentaire`) VALUES ([value-2],[value-3],[value-4],[value-5],[value-6],[value-7])";
         
         $sql = "INSERT INTO tvisiteurs(Nom, Prenom, Email, Telephone, Sujet, Commentaire, Accepte, DataPersoConservees, Suivi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
@@ -132,11 +154,12 @@
         $_SESSION['tonNom'] = $personne['nom'];
         //$_POST['nom'];
         $_SESSION['tonPrenom'] = $personne['prenom'];
-        echo "Vos coordonnées sont enregistrées";
-        echo "merci";
+        // pour les data bien enregistrées => msg envoyé vers page10
         header('location: ../01pages/page10.php');
         exit();
-    }
+    }   // fin du else
+    }   // fin du try
+    
     catch(PDOException $e) {
         echo "---  Erreur:   " . $e;
     }

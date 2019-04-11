@@ -4,7 +4,7 @@ session_start();
 if (isset($_SESSION['tonNom']) && isset($_SESSION['tonPrenom'])) {
     
 
-$page_en_cours = "page10";
+$page_en_cours = "pageErr001.php";
 ?>
 
 <!doctype html>
@@ -57,9 +57,12 @@ $page_en_cours = "page10";
     <div class="contenu_page">
         <?php
         
-            echo 'Cher(e)' . $_SESSION['tonNom'] . ' ' . $_SESSION['tonPrenom'] . ', votre mail est bien enregistré';
+            echo 'Cher(e)' . $_SESSION['tonNom'] . ' ' . $_SESSION['tonPrenom'] . ', votre mail NE peut être enregistré';
         ?>
         <br>
+        <?php
+            echo 'En effet, votre email ' . $_SESSION['tonEmail'] . ' a déjà été enrgistré !';
+        ?>
         <?php
             echo '<a href="../index.php">RETOUR</a>';
                 // fichier logout.php ==> encore à faire = pour terminer avec $_SESSIO? !!!
@@ -78,13 +81,12 @@ $page_en_cours = "page10";
 <?php 
     } else {
         echo 'Vous n\'êtes pas enregistré';
-        session_unset();
-        session_destroy();
-    ?>
-        <br>
-        <a href="../index.php">RETOUR</a>';
-    <?php 
+        echo '<br>';
+        echo '<a href="../index.php">RETOUR</a>';
     }
+    
+    session_unset();
+    session_destroy();
 ?>
 </body>
 </html>
