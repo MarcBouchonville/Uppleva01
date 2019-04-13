@@ -63,7 +63,10 @@ $page_en_cours = "pageErr001.php";
         <?php
             echo 'En effet, votre email ' . $_SESSION['tonEmail'] . ' a déjà été enrgistré !';
         ?>
+        <br>
+        
         <?php
+            //echo 'le résultat est le suivant :  ' . $_SESSION['resultat'];
             echo '<a href="../index.php">RETOUR</a>';
                 // fichier logout.php ==> encore à faire = pour terminer avec $_SESSIO? !!!
                 // puis retour au fichier index.php

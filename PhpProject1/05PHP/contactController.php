@@ -22,11 +22,9 @@
         {
             $acceptepersonne = FALSE;
         }
-
         // si $valid n'est PAS NULL, alors ces data sont remplies
         // nettoyage et assignation
         // + vérification des champs pour la sécurité
-                
         $_POST['Nom'] = strip_tags($_POST['Nom']);
         $nom01 = filter_input(INPUT_POST,'Nom',FILTER_SANITIZE_STRING);
         $personne['nom'] = mb_strtoupper($nom01,'UTF-8');
@@ -54,7 +52,6 @@
             $personne['DataPersoConservees'] = 0;
         }
         
-        //$personne['DataPersoConservees'] = $_POST['acceptePerso'];
         $personne['Suivi'] = "nouveau";        
     }
     else
@@ -68,49 +65,57 @@
     
     require "connect.php";
     try {
-        //$pdo = new PDO("mysql:host=localhost;dbname=commerce;charset=utf8", "root", "");
-        //$pdo = new PDO("mysql:host=localhost;dbname=commerce;charset=utf8","root",""); ==> probl : PAS d'espace !!
-        //$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+
         $pdo = new PDO("mysql:host=" . SERVER . ";dbname=" . BASE . ";charset=utf8", USER, PASSWD);
         
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         // 1) recherche de la personne dans la table tvisiteurs
         // pour éviter les doublons !
-        $nom02 = $personne['nom'];
-        $prenom02 = $personne['prenom'];
-        $email02 = $personne['email'];
+
+        $sql = "SELECT Nom, Prenom, Email FROM tvisiteurs WHERE Nom LIKE ? AND Prenom LIKE ? AND Email LIKE ?";
+        $query = $pdo->prepare($sql);
+        $query->bindValue(1, $personne['nom']);
+        $query->bindValue(2, $personne['prenom']);
+        $query->bindValue(3, $personne['email']);
         
+        $query->execute();
+        //$requete->setFetchMode(PDO::FETCH_ASSOC);
+        $resultat = $query->fetch(PDO::FETCH_ASSOC);
         
-        $requete = $pdo->query('SELECT * FROM tvisiteurs WHERE Nom LIKE ' . $nom02 . ' AND Prenom LIKE ' . $prenom02 . ' AND Email LIKE ' . $email02 . ';');
+        //var_dump($resultat);
+        while ($row = $query->fetch()) {
+            if ($row['Nom'] != "") {
+            $tableau['Nom'] = $row['Nom'];
+            $tableau['Prenom'] = $row['Prenom'];
+            $tableau['Email'] = $row['Email'];
+            }
+        }
         
-        $tableau = $requete->fetch();
-        // nb d'enregs dans tableau > 0 si le user existe déjà !
-        
-        if (sizeof($tableau) > 0) {
+        if (count($tableau) > 0) {
+            //var_dump($tableau);
+            echo "<BR>";
+            echo count($tableau) . '  enregistrements dans le tableau';
+            
             session_start();
-            $_SESSION['tonNom'] = $personne['nom'];
-            $_SESSION['tonPrenom'] = $personne['prenom'];
-            $_SESSION['tonEmail'] = $personne['email'];
+            
+            
+            $_SESSION['tonNom'] = $tableau['Nom'];
+                    //$personne['nom'];
+            $_SESSION['tonPrenom'] = $tableau['Prenom'];
+            $_SESSION['tonEmail'] = $tableau['Email'];
+            //$_SESSION['resultat'] = $resultat;
             header('location: ../01pages/pageErr001.php');
             exit();
         }
         else
         {
-            
-        
         // si aucun enreg trouvé dans tvisiteurs
 
        //  statements :
         
-        
         $sql = "INSERT INTO tvisiteurs(Nom, Prenom, Email, Telephone, Sujet, Commentaire, Accepte, DataPersoConservees, Suivi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        
-        
-        /* $stmt = $pdo->prepare("INSERT INTO tvisiteurs" 
-                . " (Nom, Prenom, Email, Telephone, Sujet, Commentaire)"
-                . " VALUES(?, ?, ?, ?, ?, ?)"); */
-        
+
         $stmt = $pdo->prepare($sql);
         
         $stmt->bindValue(1, $personne['nom']);
