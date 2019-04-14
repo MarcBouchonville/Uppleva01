@@ -56,11 +56,16 @@ Il contient un espace réservé pour une image, qui doit être remplacé par vot
 }
 
 #en-cours a {
-    background-color: blue;
     font-weight: bold;
-    color: red;
 }
 
+#en-cours {
+    background-color: blue;
+}
+
+#enCours {
+    background-color: #97be10;
+}
 .contenu {
 	font-size: 2vw;
 	padding: 2% 1% 2% 1%;
