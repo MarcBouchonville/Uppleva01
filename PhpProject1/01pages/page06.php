@@ -26,7 +26,16 @@
 					}
 			}
     </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
+    <script>
+        $(document).ready(function(){
+            $("#cmdPage06").mouseover(function(){
+                    $("#cmdPage06").css("background-color", "#323232");
+                    $("#cmdPage06").css("color", "#FFF");
+            });
+        });
+    </script>
 </head>
 
 <body>

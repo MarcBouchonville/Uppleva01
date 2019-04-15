@@ -16,8 +16,8 @@
    <meta lang="en" name="description" content="Uppelva, live Scandinavian experience" />
 <title>Uppleva</title>
 	<!-- <link href="02CSS/Style001.css" rel="stylesheet" media="all" /> -->
-    <link href="02CSS/Style001.css" rel="stylesheet" media="only screen and (min-width: 640px)" />
-    <link href="02CSS/Style002.css" rel="stylesheet" media="only screen and (max-width: 639px)" />
+    <link href="02CSS/Style001.css" rel="stylesheet" media="only screen and (min-device-width: 640px)" />
+    <link href="02CSS/Style002.css" rel="stylesheet" media="only screen and (max-device-width: 639px)" />
     <link href="02CSS/Style002.css" rel="stylesheet" media="screen and (max-width: 639px) and handheld" />
 
     <!--	pour le défilement des images : ces 2 meta suivants : -->
@@ -40,6 +40,18 @@
             color: white;
         }
     </style>
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#cmdIndex").mouseover(function(){
+                    $("#cmdIndex").css("background-color", "#323232");
+                    $("#cmdIndex").css("color", "#FFF");
+            });
+        });
+    </script>
     
 </head>
 
@@ -54,25 +66,25 @@
    	<a href="#" id="menutitre" class="mobile" 
         	onclick="menumobile(); return false;">Menu</a>
     <ul id="menu">
-      <li <?php if ($page_en_cours == 'index') {echo ' id="en-cours"';} ?>>
-        <a href="#">home</a>
+      <li>
+        <a href="#" id="cmdIndex">home</a>
       </li>
-      <li <?php if ($page_en_cours == 'page02') {echo ' id="en-cours"';} ?>>
+      <li>
         <a href="01pages/page02.php">à propos</a>
       </li>
-      <li <?php if ($page_en_cours == 'page03') {echo ' id="en-cours"';} ?>>
+      <li>
         <a href="01pages/page03.php">services</a>
       </li>
-      <li <?php if ($page_en_cours == 'page04') {echo ' id="en-cours"';} ?>>
+      <li>
         <a href="01pages/page04.php">réalisations</a>
       </li>
-      <li <?php if ($page_en_cours == 'page05') {echo ' id="en-cours"';} ?>>
+      <li>
         <a href="01pages/page05.php">projets</a>
       </li>
-      <li <?php if ($page_en_cours == 'page06') {echo ' id="en-cours"';} ?>>
+      <li>
         <a href="01pages/page06">inspiration</a>
       </li>
-      <li <?php if ($page_en_cours == 'page07') {echo ' id="en-cours"';} ?>>
+      <li>
         <a href="01pages/page07.php">contact</a>
 <!-- end .sidebar1 -->
       </li>

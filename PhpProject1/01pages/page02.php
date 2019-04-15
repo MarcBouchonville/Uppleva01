@@ -20,6 +20,18 @@
     <link href="../02CSS/Style002.css" rel="stylesheet" media="only screen and (max-width: 639px)" />
     <link href="../02CSS/Style002.css" rel="stylesheet" media="screen and (max-width: 639px) and handheld" />
     
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#cmdPage02").mouseover(function(){
+                    $("#cmdPage02").css("background-color", "#323232");
+                    $("#cmdPage02").css("color", "#FFF");
+            });
+        });
+    </script>
+    
+</head> 
     <script>
 		function menumobile() {
 				bloc = document.getElementById("menu");
@@ -41,39 +53,10 @@
         <?php include("entete.php"); ?>
 
         <?php 
-            /*$page_en_cours="page02";*/
-            //include("menu.php");
+            $page_en_cours="page02";
+            include("menu.php");
         ?>
-<!-- MENU AJOUTE -->
-  <nav class="blocmenu">
-   	<a href="#" id="menutitre" class="mobile" 
-        	onclick="menumobile(); return false;">Menu</a>
-    <ul id="menu">
-      <li>
-          <a href="../index.php">home</a>
-      </li>
-      <li id="en-cours">
-          <a href="#">à propos</a>
-      </li>
-      <li>
-        <a href="page03.php">services</a>
-      </li>
-      <li>
-        <a href="page04.php">réalisations</a>
-      </li>
-      <li>
-        <a href="page05.php">projets</a>
-      </li>
-      <li>
-          <a href="page06.php">inspiration</a>
-      </li>
-      <li>
-        <a href="page07.php">contact</a>
-<!-- end .sidebar1 -->
-      </li>
-    </ul>
-  </nav>
-<!-- FIN DU MENU -->
+
     <!--    corps de fichier    -->
   
   <section class="contenu">

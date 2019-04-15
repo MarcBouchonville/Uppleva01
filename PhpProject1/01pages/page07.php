@@ -30,6 +30,40 @@
 			}
     </script>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#cmdPage07").mouseover(function(){
+                    $("#cmdPage07").css("background-color", "#323232");
+                    $("#cmdPage07").css("color", "#FFF");
+            });
+        });
+    </script>
+    
+    
+    <script>
+    $(document).ready(function(){
+      $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+      });
+      $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+      });
+    });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+      $("textarea").focus(function(){
+        $(this).css("background-color", "#cccccc");
+      });
+      $("textarea").blur(function(){
+        $(this).css("background-color", "#ffffff");
+      });
+    });
+    </script>
+    
 </head>
 
 <body>

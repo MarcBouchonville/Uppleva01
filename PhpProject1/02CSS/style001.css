@@ -50,7 +50,7 @@ Il contient un espace réservé pour une image, qui doit être remplacé par vot
 .blocmenu {
 	float: left;
 	width: 30%;
-	background-color: #ECECEC;
+	background-color: inherit;
 	padding-bottom: 5%;
 	padding-top: 2%;
 }
@@ -60,12 +60,14 @@ Il contient un espace réservé pour une image, qui doit être remplacé par vot
 }
 
 #en-cours {
-    background-color: blue;
+    background-color: #323232;
 }
 
-#enCours {
-    background-color: #97be10;
+#menu li a {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 2vw;
 }
+
 .contenu {
 	font-size: 2vw;
 	padding: 2% 1% 2% 1%;
@@ -96,18 +98,13 @@ article p img {
 	max-height: 100%;
 }
 
-#menu li a {
-	font-family: "Courier New", Courier, monospace;
-	font-size: 2vw;
-}
-
 
 #contenuPage4 {
     display: flex;
     flex-wrap: wrap;
 }
 
-#contenuPage4 figure {
+#contenuPage4 a figure {
     display: inline;
     /*border: 1px solid black;*/
 }
