@@ -64,6 +64,23 @@
     });
     </script>
     
+    <script>
+        function fonction01() {
+            var x = document.getElementById("champNom");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+    
+    <script>
+        // ok
+        function fonction02() {
+            var str = document.getElementById("champPrenom");
+            str.value = str.value.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+                return letter.toUpperCase();
+            });
+        }
+    </script>
+    
 </head>
 
 <body>
@@ -86,9 +103,9 @@
             <div class="section"><span>1</span>Identité</div>
                 <div class="inner-wrap">
                     <label>Nom</label>
-                    <input type="text" name="Nom" required maxlength="50" placeholder="NOM" />
+                    <input type="text" name="Nom" required maxlength="50" placeholder="NOM" id="champNom" onblur="fonction01()" />
                     <label>Prénom</label>
-                    <input type="text" name="Prenom" maxlength="50" placeholder="Prénom" />
+                    <input type="text" name="Prenom" maxlength="50" placeholder="Prénom" id="champPrenom" onblur="fonction02()" />
                 </div>
             <div class="section"><span>2</span>Contact</div>
                 <div class="inner-wrap">
