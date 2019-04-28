@@ -21,9 +21,9 @@ $page_en_cours = "page10";
    <meta lang="en" name="description" content="Uppelva, live Scandinavian experience" />
 <title>Uppleva</title>
 	<!-- <link href="02CSS/Style001.css" rel="stylesheet" media="all" /> -->
-    <link href="../02CSS/Style001.css" rel="stylesheet" media="only screen and (min-width: 640px)" />
-    <link href="../02CSS/Style002.css" rel="stylesheet" media="only screen and (max-width: 639px)" />
-    <link href="../02CSS/Style002.css" rel="stylesheet" media="screen and (max-width: 639px) and handheld" />
+    <link href="../02CSS/Style001.css" rel="stylesheet" media="only screen and (min-device-width: 640px)" />
+    <link href="../02CSS/Style002.css" rel="stylesheet" media="only screen and (max-device-width: 639px)" />
+    <link href="../02CSS/Style002.css" rel="stylesheet" media="screen and (max-device-width: 639px) and handheld" />
     
     <script>
 		function menumobile() {

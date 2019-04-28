@@ -12,9 +12,9 @@
    <meta lang="en" name="description" content="Uppelva, live Scandinavian experience" />
 <title>Uppleva</title>
 	<!-- <link href="02CSS/Style001.css" rel="stylesheet" media="all" /> -->
-    <link href="../02CSS/Style001.css" rel="stylesheet" media="only screen and (min-width: 640px)" />
-    <link href="../02CSS/Style002.css" rel="stylesheet" media="only screen and (max-width: 639px)" />
-    <link href="../02CSS/Style002.css" rel="stylesheet" media="screen and (max-width: 639px) and handheld" />
+    <link href="../02CSS/Style001.css" rel="stylesheet" media="only screen and (min-device-width: 640px)" />
+    <link href="../02CSS/Style002.css" rel="stylesheet" media="only screen and (max-device-width: 639px)" />
+    <link href="../02CSS/Style002.css" rel="stylesheet" media="screen and (max-device-width: 639px) and handheld" />
     
     <!-- <link href="../02css/style007.css" rel="stylesheet" type="text/css"/>	-->
     
@@ -64,32 +64,43 @@
                   <img style="max-height: 200px; max-width: 200px;" 
                        alt="La Barrière de Transinne" 
                        src="../10images/002_Realisations_La-Barriere-de-Transinne/image045b.jpg" 
-                       title="La Barrière de Transinne" 
-                       href="page04001.php">
+                       title="La Barrière de Transinne">
                   <!-- <p><a href="page04001.php">La Barrière de Transinne</a></p>  -->
               </figure>
         </a>
         <a href="page04002.php">
               <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="Noël" src="../10images/003_Realisations_Noel/image060b.jpg" title="Noël">
+                  <img style="max-height: 200px; max-width: 200px;" 
+                       alt="Noël" 
+                       src="../10images/003_Realisations_Noel/image060b.jpg" 
+                       title="Noël">
                   <figcaption></figcaption>
               </figure>
         </a>
         <a href="page04003.php">
               <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="Maison unifamiliale" src="../10images/004_Realisations_Maison-unifamiliale/image100b.jpg" title="Maison unifamiliale">
+                  <img style="max-height: 200px; max-width: 200px;" 
+                       alt="Maison unifamiliale" 
+                       src="../10images/004_Realisations_Maison-unifamiliale/image100b.jpg" 
+                       title="Maison unifamiliale">
                   <figcaption></figcaption>
               </figure>
         </a>
         <a href="page04004.php">
               <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="Evènementiel" src="../10images/005_Realisations_evenementiel/image110b.jpg" title="Evènementiel">
+                  <img style="max-height: 200px; max-width: 200px;" 
+                       alt="Evènementiel" 
+                       src="../10images/005_Realisations_evenementiel/image110b.jpg" 
+                       title="Evènementiel">
                   <figcaption></figcaption>
               </figure>
         </a>
         <a href="page04006.php">
               <figure>
-                  <img style="max-height: 200px; max-width: 200px;" alt="Appartement bruxellois" src="../10images/007_Realisations_appartement-bruxellois/image140b.JPG" title="Appartement bruxellois">
+                  <img style="max-height: 200px; max-width: 200px;" 
+                       alt="Appartement bruxellois" 
+                       src="../10images/007_Realisations_appartement-bruxellois/image140b.JPG" 
+                       title="Appartement bruxellois">
                   <figcaption></figcaption>
               </figure>
         </a>

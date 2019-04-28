@@ -139,10 +139,8 @@ a:link {
 	text-decoration: underline; /* à moins que vous ne définissiez un style particulièrement exclusif pour vos liens, mieux vaut 
 									prévoir un soulignement, qui garantit une identification visuelle rapide. */
 }
-a:hover, a:active, a:focus { /* ce groupe de sélecteurs offrira à un navigateur au clavier la même expérience de survol que celle 
-								d'une personne employant la souris. */
-	text-decoration: none;
-}
+
+
 
 /* ~~ ce conteneur entoure toutes les autres divs, en leur attribuant leur largeur sur base d'un pourcentage ~~ */
 
