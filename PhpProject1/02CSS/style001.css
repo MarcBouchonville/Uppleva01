@@ -189,11 +189,12 @@ a:link {
 	background-color: white;
 	color: black;
 }
-#menu li a:hover, #menu li a:active, #menu li a:focus { /* modifie la couleur de l'arrière-plan et du texte pour les navigateurs à 
+#menu li a:hover:not(.active), #menu li a:active, #menu li a:focus { /* modifie la couleur de l'arrière-plan et du texte pour les navigateurs à 
 													la souris et au clavier. */
-	background-color: #6F7D94;
+	background-color: #323232;
 	color: #FFF;
 }
+
 
 /* ~~ Pied de page ~~ */
 .pied {

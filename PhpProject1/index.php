@@ -35,8 +35,8 @@
 			}
     </script>
     <style>
-        #ecranNrUn {
-            background-color: black;
+        #cmdIndex {
+            background-color: #323232;
             color: white;
         }
     </style>
