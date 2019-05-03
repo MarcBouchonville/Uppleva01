@@ -20,35 +20,14 @@
     <link href="../02CSS/Style002.css" rel="stylesheet" media="only screen and (max-device-width: 639px)" />
     <link href="../02CSS/Style002.css" rel="stylesheet" media="screen and (max-device-width: 639px) and handheld" />
     
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <!--    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>  -->
+    <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
+    
+    
 
     <style>
-        .recherche_personnel {
-            border: 1px solid #a8d4b1;
-            background-color: #323232;
-            margin: 2px 0px;
-            padding: 40px;
-            border-radius: 4px;
-        }
-        
-        #listeEntites {
-            float: left;
-            list-style: none;
-            margin-top: 3px;
-            padding: 0;
-            width: 190px;
-            position: absolute;
-        }
-        
-        #listeEntites li {
-            padding: 10px;
-            background: #f0f0f0;
-            border-bottom: #bbb9b9 1px solid;
-        }
-        
-        #listeEntites li:hover {
-            background: #ece3d2;
-            cursor: pointer;
+        .hide {
+            display: none;
         }
     </style>
     
@@ -65,40 +44,90 @@
 
     <br>
     <br>
-    <div class="contenu_page" style="text-align: center">
-
-        <div class="recherche_entite">
-            <input type="text" id="recherche" placeholder="Nom" />
-            <div id="suggestions"></div>
+    <main>
+    <div class="contenu_page" id="plant_manager" style="text-align: center">
+        <div id="recherche_entite">
+            <input
+                type="text"
+                name="recherche"
+                class="form-control"
+                style="text-align: center; border-radius: 15px; max-width: 75%; margin: 0 auto 15px auto"
+                placeholder="Nom"
+                onkeyup="search(this.value)"/>
+            <p id="connect-lost" class="hide">connexion perdue</p>
+        </div>
+        <div class="laTable">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Email</th>
+                        <th>Telephone</th>
+                        <th>Suivi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="tvisiteurs in visiteurs">
+                        <td>{{ tvisiteurs.idVisiteur }}</td>
+                        <td>{{ tvisiteurs.Nom }}</td>
+                        <td>{{ tvisiteurs.Prenom }}</td>
+                        <td>{{ tvisiteurs.Email }}</td>
+                        <td>{{ tvisiteurs.Telephone }}</td>
+                        <td>{{ tvisiteurs.Suivi }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         
     </div>
-    
+    </main>
     <!--    pied de page    -->
-        <?php include("piedDePage.php") ?>
+        <!-- PAS besoin du pied ici pour la gestion des clients -->
      <!-- end .footer -->
 </div>	  <!-- end .global -->
 
 <script>
-    $(document).ready(function(){
-       $("recherche").keyup(function(){
-          $.ajax({
-             type: "POST" ,
-             url: "../05PHP/rechercheNom.php",
-             data: 'nomPP=' + $(this).val(),
-             success: function(data){
-                 $("#suggestions").show();
-                 $("#suggestions").html(data);
-                 $("#recherche").css("background", "#FFF");
-             }
-          });
-       });
+    var vm = new vue ({
+       el:'#plant_manager',
+       data: {
+           visiteurs:[{
+                   idVisiteur:'1',
+                   Nom:'nom',
+                   Prneom:'prenom',
+                   Email:'mail',
+                   Telephone:'tel',
+                   Suivi:'suivi',
+           }]
+       }
     });
     
-    function choixNom(val){
-        $("#recherche").val(val);
-        $("#suggestions").hide();
+    
+    function search(filter){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200){
+                document.getElementById('connection-lost').style.display = "hide";
+                var visiteurs = JSON.parse(this.responseText);
+                vm.visiteurs.splice(0);
+                for (var i = 0; i < visiteurs.length; i++) {
+                    Vue.set(vm.visiteurs, i, visiteurs[i]);
+                }
+            }
+            else if(this.readyState === 4){
+                document.getElementById('connection-lost').style.display = 'block';
+            }
+            else {
+                // ne nous intersse pas
+            }   
+        }
+        xhttp.open("GET", "../05PHP/rechercheNom.php?filter=" + filter, true);
+        xhttp.send();
     }
+    // initialisation du tableau
+    search('');
+    
 </script>
 
 </body>

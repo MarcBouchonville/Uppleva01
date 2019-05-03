@@ -1,37 +1,31 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+    $filter = filter_input(INPUT_GET, 'filter', FILTER_SANITIZE_FULL_SPECIAL_CHARS) . '%';
+    $limit = intval(filter_input(INPUT_GET, 'limit', FILTER_SANITIZE_NUMBER_INT));
+    $limit = ($limit > 0) ? $limit: 100;
+    $offset = intval(filter_input(INPUT_GET, 'offset', FILTER_SANITIZE_NUMBER_INT));
+    $offset = ($offset >= 0) ? $offset: 0;
+    
+    
+
     require "connect.php";
     try {
 
-        $pdo = new PDO("mysql:host=" . SERVER . ";dbname=" . BASE . ";charset=utf8", USER, PASSWD);
+        $con = new PDO("mysql:host=" . SERVER . ";dbname=" . BASE . ";charset=utf8", USER, PASSWD);
         
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
-        if (!empty($_POST["nomPP"])) {
-            $sql="SELECT Nom, Prenom, Email FROM tvisiteurs WHERE Nom LIKE '".$_POST["nomPP"]."%' ORDER BY nomPP LIMIT 0,6";
-            $query->execute($sql);
-            $resultat=$query->fetch(PDO::FETCH_ASSOC);
-            if (!empty($resultat)) {
-                ?>
-                <ul id="listeEntites">
-                    <?php
-                        foreach ($resultat as $personne) {
-                            ?>
-                    <li onclick="choixNom('<?php echo $personne["Nom"] + " " + $personne["Prenom"] + " " + $personne["Email"]; ?>');">
-                                <?php echo $personne["Nom"] + " " + $personne["Prenom"] + " " + $personne["Email"]; ?>
-                    </li>
-                        <?php } ?>
-                </ul>
-                <?php }
-        }
+        $stmt = $con->prepare("SELECT * FROM tvisiteurs WHERE Nom LIKE :filter " . "LIMIT :offset, :limit");
+        $stmt->bindValue(':filter', $filter);
+        $stmt->bindValue(':offset', intval($offset), PDO::PARAM_INT);
+        $stmt->bindValue(':limit', intval($limit), PDO::PARAM_INT);
         
+        $stmt->execute;
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $results = $stmt->fetchAll();
+        echo json_encode($results);
     }
         catch(PDOException $e) {
-        echo "---  Erreur:   " . $e;
+        header('Location: HTTP/1.1 500 try later' + $e->getMessage());
     }
 ?>

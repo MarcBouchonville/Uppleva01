@@ -66,7 +66,7 @@
     </div>
     
     <!--    pied de page    -->
-        <?php include("piedDePage.php") ?>
+        <!-- PAS besoin du pied ici pour la gestion des clients -->
      <!-- end .footer -->
 </div>	  <!-- end .global -->
 
