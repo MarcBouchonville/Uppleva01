@@ -21,9 +21,9 @@
     <link href="../02CSS/Style002.css" rel="stylesheet" media="screen and (max-device-width: 639px) and handheld" />
     
     <!--    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>  -->
-    <!-- <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>  -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    
+    <!-- <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  -->
+    <script src="../15js/vue.js"></script>
     
 
     <style>
@@ -46,7 +46,7 @@
     <br>
     <br>
     <main>
-        <div class="contenu_page" style="text-align: center">
+        <div class="contenu_page" id="plant_manager" style="text-align: center">
             <div id="recherche_entite">
                 <input
                     type="text"
@@ -54,11 +54,11 @@
                     class="form-control"
                     style="text-align: center; border-radius: 15px; max-width: 75%; margin: 0 auto 15px auto"
                     placeholder="Nom"
-                    onkeyup="search(this.value)" />
+                    onkeyup="search(this.value)"/>
                 <p id="connect-lost" class="hide">connexion perdue</p>
             </div>
             <div class="laTable">
-                <table border="1" id="app1">
+                <table border="1" id="app">
                     <thead>
                         <tr>
                             <th>id</th>
@@ -97,45 +97,34 @@
 </div>	  <!-- end .global -->
 
 <script>
-    var vm = new Vue ({
-       el: '#app1',
+    var app = new Vue ({
+       el: '#app',
        data: {
            visiteurs: [{
                    idVisiteur: 1,
-                   Nom: 'nom',
-                   Prenom: 'prenom',
-                   Email: 'mail',
-                   Telephone: 'tel',
-                   Suivi: 'suivi'
+                   Nom: "Bouc",
+                   Prenom: "Marc",
+                   Email: "azer@df.com",
+                   Telephone: "025658855",
+                   Suivi: "ok"
            }]
        }
     });
-    
-    function search(filter) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState === 4 && this.status === 200) {
-                document.getElementById('connection-lost').style.display = "hide";
-                var visiteurs = JSON.parse(this.responseText);
-                vm.visiteurs.splice(0);
-                for (var i = 0; i < visiteurs.length; i++) {
-                    Vue.set(vm.visiteurs, i, visiteurs[i]);
-                
-            }
-            else if (this.readyState === 4) {
-                document.getElementById('connection-lost').style.display = 'block';
-            }
-            else {
-                // ne nous intersse pas
-            }   
-        }
-        xhttp.open("GET", "../05PHP/rechercheNom.php?filter=" + filter, true);
-        xhttp.send();
-    }
-    // initialisation du tableau
-    search('');
-    
 </script>
+<script>
+    if (!window.XMLHttpRequest && window.ActiveXObject) {
+        try {
+        // Tester si les ActiveX sont autorises
+        new ActiveXObject("Microsoft.XMLHTTP");
+        // Definir le constructeur
+            window.XMLHttpRequest = function() {
+            return new ActiveXObject("Microsoft.XMLHTTP");
+            };
+        }
+        catch (exc) {}
+}
+</script>
+    
 
 </body>
 </html>

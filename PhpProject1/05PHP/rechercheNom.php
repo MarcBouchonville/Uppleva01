@@ -2,9 +2,9 @@
 
     $filter = filter_input(INPUT_GET, 'filter', FILTER_SANITIZE_FULL_SPECIAL_CHARS) . '%';
     $limit = intval(filter_input(INPUT_GET, 'limit', FILTER_SANITIZE_NUMBER_INT));
-    $limit = ($limit > 0) ? $limit: 100;
+    $limit = ($limit > 0) ? $limit : 100;
     $offset = intval(filter_input(INPUT_GET, 'offset', FILTER_SANITIZE_NUMBER_INT));
-    $offset = ($offset >= 0) ? $offset: 0;
+    $offset = ($offset >= 0) ? $offset : 0;
     
     
 
@@ -20,7 +20,7 @@
         $stmt->bindValue(':offset', intval($offset), PDO::PARAM_INT);
         $stmt->bindValue(':limit', intval($limit), PDO::PARAM_INT);
         
-        $stmt->execute;
+        $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $results = $stmt->fetchAll();
         echo json_encode($results);

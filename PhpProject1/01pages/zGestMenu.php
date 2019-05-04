@@ -56,7 +56,7 @@
                 <tr>
                     <td style="text-align: center">2</td>
                     <td style="text-align: left">
-                        <a href="#">Recherche via le Prénom</a>
+                        <a href="zGestPageChoix02.php">Recherche via le Prénom</a>
                     </td>
                 </tr>
                 <tr>
