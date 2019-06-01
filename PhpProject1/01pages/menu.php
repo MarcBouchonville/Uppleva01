@@ -2,7 +2,7 @@
    	<a href="#" id="menutitre" class="mobile" 
         	onclick="menumobile(); return false;">Menu</a>
     <ul id="menu">
-      <li>
+        <li>
           <a href="../index.php" id="cmdIndex">home</a>
       </li>
       <li>

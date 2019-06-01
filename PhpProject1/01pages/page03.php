@@ -194,6 +194,5 @@
                     myWindow.document.write("<p>" + myWindow.name + "</p>" + txtE);
 	};
 	</script>
-
 </body>
 </html>
