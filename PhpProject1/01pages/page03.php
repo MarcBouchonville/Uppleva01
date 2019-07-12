@@ -60,7 +60,7 @@
             bien au travail.  Vous voulez-adapter l'intérieur de vos bureaux, de votre boutique et que ceux-ci 
             reflètent les valeurs de votre entreprise.</p><br>
         <p class="fenetreExplication">
-            <a href='#'><span onmouseover="fenetrePopup01()">Uppleva vous propose de travailler, avec vous, l'image de votre entreprise.</span></a>
+            <a href='#'><span onclick="fenetrePopup01()">Uppleva vous propose de travailler, avec vous, l'image de votre entreprise.</span></a>
         </p><br>
         <p>
             Mobilier sur mesure
